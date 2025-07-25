@@ -1,0 +1,43 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Embedded JavaScript examples: inline, internal, and external scripts."
+        />
+        <meta name="author" content="Rayhana Akter Sumaya" />
+        <title>03 - Embedded JavaScript</title>
+    </head>
+    <body>
+        <h1>Embedded JavaScript Examples</h1>
+
+        <h2>1. Inline Script</h2>
+
+        <!-- Inline script -->
+        <button onclick="alert('Hello from inline script!')">
+            Click Me (Inline)
+        </button>
+
+        <h2>2. Internal Script</h2>
+        <button id="internalBtn">Click Me (Internal)</button>
+
+        <h2>3. External Script</h2>
+        <button id="externalBtn">Click Me (External)</button>
+
+        <!-- Internal script -->
+        <script>
+            document
+                .getElementById('internalBtn')
+                .addEventListener('click', () => {
+                    alert('Hello from internal script!');
+                });
+        </script>
+
+        <!-- External script -->
+        <script src="./script.js" defer></script>
+    </body>
+</html>
