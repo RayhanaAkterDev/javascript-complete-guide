@@ -1,6 +1,6 @@
 # 🧠 JavaScript Core Concepts
 
-> A structured, real-world focused journey through JavaScript — from fundamentals to advanced patterns.
+A complete, hands-on JavaScript learning guide from basics to advanced topics. Learn core concepts with clear explanations and practical examples to build real-world skills.
 
 ---
 
