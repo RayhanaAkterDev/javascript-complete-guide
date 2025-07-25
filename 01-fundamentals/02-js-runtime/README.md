@@ -1,80 +1,80 @@
-# 📘 02 - How JavaScript Runs
+# How JavaScript Runs
 
-> **Tags:** javascript, runtime, js-engine, execution-context  
-> **Purpose:** Understand how JavaScript code is executed by JS engines in browsers and Node.js.  
-> **Overview:** This section explains JavaScript’s runtime environment, the event loop, call stack, and execution contexts that allow JS code to run.
-
----
-
-📝 **Table of Contents**
-
-- [📘 02 - How JavaScript Runs](#-02---how-javascript-runs)
-  - [1️⃣ JavaScript Engines](#1️⃣-javascript-engines)
-  - [2️⃣ Execution Context](#2️⃣-execution-context)
-  - [3️⃣ Call Stack](#3️⃣-call-stack)
-  - [4️⃣ Memory Heap](#4️⃣-memory-heap)
-  - [5️⃣ Event Loop and Task Queue](#5️⃣-event-loop-and-task-queue)
-  - [6️⃣ Single-threaded nature of JS](#6️⃣-single-threaded-nature-of-js)
-  - [7️⃣ Browser vs Node.js Runtime](#7️⃣-browser-vs-nodejs-runtime)
-  - [▶️ Next Up](#️-next-up)
-  - [🔁 Navigation](#-navigation)
+**Tags:** `javascript`, `runtime`, `js-engine`, `execution-context`  
+**Purpose:** Understand how JavaScript code executes via JS engines in browsers and Node.js.  
+**Overview:** Explains the JS runtime environment including the event loop, call stack, execution contexts, and differences between browser and Node.js runtimes.
 
 ---
 
-## 1️⃣ JavaScript Engines
+_Table of Contents:_
 
-- JS engines like **V8 (Chrome)**, **SpiderMonkey (Firefox)**, and **JavaScriptCore (Safari)** parse, compile, and execute JS code.  
-- Engines convert code to machine code or bytecode and optimize it for fast execution.
-
----
-
-## 2️⃣ Execution Context
-
-- When JS runs, it creates an **execution context** for the current scope: global, function, or eval.  
-- Context stores variables, functions, and `this` binding relevant to the running code.
-
----
-
-## 3️⃣ Call Stack
-
-- The call stack manages function invocation order.  
-- It follows **LIFO** (Last In, First Out) — the last function called is the first to return.
+- [How JavaScript Runs](#how-javascript-runs)
+  - [1. JavaScript Engines](#1-javascript-engines)
+  - [2. Execution Context](#2-execution-context)
+  - [3. Call Stack](#3-call-stack)
+  - [4. Memory Heap](#4-memory-heap)
+  - [5. Event Loop and Task Queue](#5-event-loop-and-task-queue)
+  - [6. Single-threaded Nature of JavaScript](#6-single-threaded-nature-of-javascript)
+  - [7. Browser vs Node.js Runtime](#7-browser-vs-nodejs-runtime)
+  - [8. Next Topic](#8-next-topic)
+  - [9. Navigation](#9-navigation)
 
 ---
 
-## 4️⃣ Memory Heap
+## 1. JavaScript Engines
 
-- Memory heap stores objects, variables, and data needed during execution.  
-- JS automatically manages memory allocation and garbage collection.
-
----
-
-## 5️⃣ Event Loop and Task Queue
-
-- JS is single-threaded but handles async tasks via the **event loop**.  
-- The event loop waits for call stack to clear, then pushes queued tasks to execute.
+- Engines like **V8 (Chrome)**, **SpiderMonkey (Firefox)**, and **JavaScriptCore (Safari)** parse, compile, and execute JS.  
+- Convert JS code into machine code or bytecode, optimizing for performance.
 
 ---
 
-## 6️⃣ Single-threaded nature of JS
+## 2. Execution Context
 
-- JS executes one command at a time but uses event-driven, non-blocking IO for concurrency.
-
----
-
-## 7️⃣ Browser vs Node.js Runtime
-
-- Browsers provide APIs like DOM, timers, and fetch.  
-- Node.js offers server-side APIs, file system access, and networking.
+- Created for each running scope (global, function, eval).  
+- Holds variables, functions, and the current `this` value.
 
 ---
 
-## ▶️ Next Up
+## 3. Call Stack
 
-**[→ 03 - Embedding JavaScript](../03-embedding-js/README.md)** — Learn how to add JS to HTML via inline, internal, and external scripts.
+- Manages function calls using **LIFO** (Last In, First Out) principle.  
+- Tracks execution order and handles return values.
 
 ---
 
-## 🔁 Navigation
+## 4. Memory Heap
+
+- Stores objects, variables, and data during runtime.  
+- Includes automatic garbage collection to free unused memory.
+
+---
+
+## 5. Event Loop and Task Queue
+
+- Enables asynchronous behavior in a single-threaded environment.  
+- Event loop monitors call stack and moves tasks from the queue to the stack when it's empty.
+
+---
+
+## 6. Single-threaded Nature of JavaScript
+
+- Executes one operation at a time but uses event-driven, non-blocking IO for concurrency.
+
+---
+
+## 7. Browser vs Node.js Runtime
+
+- Browsers provide APIs for DOM manipulation, timers, fetch, etc.  
+- Node.js provides server-side features like file system access and networking.
+
+---
+
+## 8. Next Topic
+
+**[→ 03 - Embedding JavaScript](../03-embedding-js/README.md)** — Learn how to add JavaScript to HTML via inline, internal, and external scripts.
+
+---
+
+## 9. Navigation
 
 [← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
