@@ -86,7 +86,6 @@ See files in the _`06-variables`_ folder for working demos:
 - [`var-let-const.js`](var-let-const.js)
 - [`scope.js`](scope.js)
 - [`hoisting-tdz.js`](hoisting-tdz.js)
-- [`naming-conventions.js`](naming-conventions.js)
 
 ---
 
