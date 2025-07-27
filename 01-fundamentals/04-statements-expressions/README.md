@@ -124,7 +124,7 @@ See files in the _`04-statements-expressions`_ folder for a working demo:
 
 ## 7. Next Topic
 
-**[→ 05 - Comments](../05-comments/README.md)** — Learn how to document code using comments and understand their best usage in clean coding.
+**[→ 05 - Keywords](../05-keywords/README.md)** — Learn how to document code using comments and understand their best usage in clean coding.
 
 ---
 
