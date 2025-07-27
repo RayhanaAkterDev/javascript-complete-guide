@@ -117,7 +117,7 @@ Ensure it includes the script with:
 
 ## 9. Next Topic
 
-**[→ Statements & Expressions](../04-statements-expressions/README.md)** — Learn JavaScript syntax building blocks and how they function.
+**[→ JS Runtime](../02-js-runtime/README.md)** — Understand how JavaScript code executes behind the scenes, including the engine, call stack, and execution context.
 
 ---
 
