@@ -1,4 +1,4 @@
-# Embedding JavaScript
+# 03 - Embedding JavaScript
 
 **Tags:** `javascript`, `embedding`, `scripts`, `html`, `basics`  
 **Purpose:** Understand how to properly embed JavaScript into HTML using different methods.  
@@ -8,7 +8,7 @@
 
 _Table of Contents:_
 
-- [Embedding JavaScript](#embedding-javascript)
+- [03 - Embedding JavaScript](#03---embedding-javascript)
   - [1. Inline JavaScript](#1-inline-javascript)
   - [2. Internal JavaScript](#2-internal-javascript)
   - [3. External JavaScript](#3-external-javascript)
