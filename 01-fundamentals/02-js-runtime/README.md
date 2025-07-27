@@ -1,4 +1,4 @@
-# How JavaScript Runs
+# 02 - JavaScript Runtime
 
 **Tags:** `javascript`, `runtime`, `js-engine`, `execution-context`  
 **Purpose:** Understand how JavaScript code executes via JS engines in browsers and Node.js.  
@@ -8,7 +8,7 @@
 
 _Table of Contents:_
 
-- [How JavaScript Runs](#how-javascript-runs)
+- [02 - JavaScript Runtime](#02---javascript-runtime)
   - [1. JavaScript Engines](#1-javascript-engines)
   - [2. Execution Context](#2-execution-context)
   - [3. Call Stack](#3-call-stack)
