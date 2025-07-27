@@ -13,19 +13,20 @@ Master these fundamentals before moving on to advanced topics like DOM manipulat
 2. [How JavaScript Runs](./02-js-runtime/README.md): Understanding JS engines, runtime, and environment differences  
 3. [Embedding JavaScript](./03-embedding-js/README.md): Inline, internal, and external script embedding  
 4. [Statements & Expressions](./04-statements-expressions/README.md): Core syntax building blocks  
-5. [Comments](./05-comments/README.md): Single-line and multi-line comments with best practices  
-6. [Variables](./06-variables/README.md): Declaration types (`var`, `let`, `const`) and scoping rules  
-7. [Data Types](./07-data-types/README.md): Primitive vs reference types and type checking  
-8. [Type Conversion & Coercion](./08-type-conversion-coercion/README.md): Implicit and explicit type conversions  
-9. [Operators](./09-operators/README.md): Arithmetic, comparison, logical, ternary, and bitwise operators  
-10. [Input & Output](./10-io-methods/README.md): Logging and browser interaction (`console.log`, `alert`, `prompt`)  
-11. [String Manipulation](./11-string-manipulation/README.md): String methods and template literals  
-12. [Conditionals](./12-conditionals/README.md): Control flow with `if`, `else`, `else if`, and `switch`  
-13. [Loops](./13-loops/README.md): Looping constructs and control (`for`, `while`, `do...while`, `for...of`, `for...in`)  
-14. [Functions](./14-functions/README.md): Function declaration, expression, arrow functions, parameters, and returns  
-15. [Scope](./15-scope/README.md): Global, local, block, and lexical scope explained  
-16. [Hoisting](./16-hoisting/README.md): Variable and function hoisting, and the Temporal Dead Zone  
-17. [Strict Mode](./17-strict-mode/README.md): Enabling safer JavaScript with `"use strict"`
+5. [Keywords](./05-keywords/README.md): JavaScript reserved words and identifiers essential for syntax and structure  
+6. [Comments](./06-comments/README.md): Single-line and multi-line comments with best practices  
+7. [Variables](./07-variables/README.md): Declaration types (`var`, `let`, `const`) and scoping rules  
+8. [Data Types](./08-data-types/README.md): Primitive vs reference types and type checking  
+9. [Type Conversion & Coercion](./09-type-conversion-coercion/README.md): Implicit and explicit type conversions  
+10. [Operators](./10-operators/README.md): Arithmetic, comparison, logical, ternary, and bitwise operators  
+11. [Input & Output](./11-io-methods/README.md): Logging and browser interaction (`console.log`, `alert`, `prompt`)  
+12. [String Manipulation](./12-string-manipulation/README.md): String methods and template literals  
+13. [Conditionals](./13-conditionals/README.md): Control flow with `if`, `else`, `else if`, and `switch`  
+14. [Loops](./14-loops/README.md): Looping constructs and control (`for`, `while`, `do...while`, `for...of`, `for...in`)  
+15. [Functions](./15-functions/README.md): Function declaration, expression, arrow functions, parameters, and returns  
+16. [Scope](./16-scope/README.md): Global, local, block, and lexical scope explained  
+17. [Hoisting](./17-hoisting/README.md): Variable and function hoisting, and the Temporal Dead Zone  
+18. [Strict Mode](./18-strict-mode/README.md): Enabling safer JavaScript with `"use strict"`
 
 ---
 
