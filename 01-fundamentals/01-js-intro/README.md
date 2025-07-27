@@ -1,4 +1,4 @@
-# JavaScript Introduction
+# 01 - JavaScript Introduction
 
 **Tags:** `javascript`, `intro`, `basics`, `what-is-js`, `web-development`  
 **Purpose:** Understand what JavaScript is, why it’s essential, and where it fits in the web ecosystem.  
@@ -9,7 +9,7 @@ Learn what it does, where it's used, and run your first lines of JavaScript code
 
 _Table of Contents:_
 
-- [JavaScript Introduction](#javascript-introduction)
+- [01 - JavaScript Introduction](#01---javascript-introduction)
   - [1. What is JavaScript?](#1-what-is-javascript)
   - [2. JavaScript in the Web Stack](#2-javascript-in-the-web-stack)
   - [3. A Brief History of JavaScript](#3-a-brief-history-of-javascript)
