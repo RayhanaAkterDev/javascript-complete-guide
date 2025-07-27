@@ -19,8 +19,7 @@ _Table of Contents:_
     - [3.1 Name Starts with Digit](#31-name-starts-with-digit)
     - [3.2 Using Implicit Globals](#32-using-implicit-globals)
     - [3.3 Reserved Keywords](#33-reserved-keywords)
-  - [Code Example Files](#code-example-files)
-  - [Navigation](#navigation)
+  - [4. Navigation](#4-navigation)
 
 ---
 
@@ -131,12 +130,6 @@ See the full list of reserved words on [MDN Web Docs](https://developer.mozilla.
 
 ---
 
-## Code Example Files
-
-[`naming-conventions.js`](naming-conventions.js)
-
----
-
-## Navigation
+## 4. Navigation
 
 🔙 [Back to Variables](README.md)
