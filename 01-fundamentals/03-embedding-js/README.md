@@ -22,7 +22,7 @@ _Table of Contents:_
 
 ## 1. Inline JavaScript
 
-JavaScript code written directly inside HTML element attributes such as `onclick`.
+JavaScript code written directly inside HTML element attributes, such as `onclick`.
 
 **Example:**
 
@@ -36,7 +36,7 @@ This method is simple but not recommended in real-world projects due to security
 
 ## 2. Internal JavaScript
 
-JavaScript code placed inside `<script>` tags within the same HTML file, typically inside `<head>` or `<body>`.
+JavaScript code is placed inside `<script>` tags within the same HTML file, typically inside `<head>` or `<body>`.
 
 **Example:**
 
@@ -52,7 +52,7 @@ Use for small, page-specific logic or temporary scripts during development.
 
 ## 3. External JavaScript
 
-JavaScript stored in a separate .js file and linked using the `<script src="...">` element.  
+JavaScript is stored in a separate .js file and linked using the `<script src="...">` element.  
 Promotes separation of concerns, better caching, and reusability.
 
 **Example:**
@@ -91,7 +91,7 @@ These attributes help optimize load performance and control execution order.
 
 ## 7. Next Topic
 
-**[→ 04 - Statements & Expressions](../04-statements-expressions/README.md)** — Understand JavaScript syntax building blocks and how they work.
+**[→ 04 - Statements & Expressions](../04-statements-expressions/README.md)** — Learn how statements and expressions form the structure of JavaScript code.
 
 ---
 
