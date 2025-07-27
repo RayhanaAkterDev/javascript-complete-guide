@@ -1,4 +1,4 @@
-# Statements & Expressions
+# 04 - Statements & Expressions
 
 **Tags:** `javascript`, `syntax`, `expressions`, `statements`, `language-core`  
 **Purpose:** Understand the foundational syntax building blocks of JavaScript—statements and expressions—and how they form the structure of executable code.  
@@ -8,7 +8,7 @@
 
 _Table of Contents:_
 
-- [Statements \& Expressions](#statements--expressions)
+- [04 - Statements \& Expressions](#04---statements--expressions)
   - [1. What Are Expressions?](#1-what-are-expressions)
   - [2. What Are Statements?](#2-what-are-statements)
   - [3. Key Differences](#3-key-differences)
