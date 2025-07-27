@@ -111,7 +111,7 @@ See files in the _`05-keywords`_ folder for usage examples:
 
 ## 6. Next Topic
 
-➡️ **[06 - comments](../06-comments/README.md)** — Learn how to declare and manage variables using `var`, `let`, and `const`.
+**[→ 06 - comments](../06-comments/README.md)** — Learn how to declare and manage variables using `var`, `let`, and `const`.
 
 ---
 

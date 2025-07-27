@@ -91,7 +91,7 @@ See files in the _`06-variables`_ folder for working demos:
 
 ## 7. Next Topic
 
-➡️ **07 - Data Types** — Explore primitive and reference data types, type checking, and data structures.
+**[→ 07 - Data Types](../07-data-types/README.md)** — Explore primitive and reference data types, type checking, and how JavaScript handles different forms of data.
 
 ---
 

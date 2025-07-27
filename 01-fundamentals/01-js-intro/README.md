@@ -117,7 +117,7 @@ Ensure it includes the script with:
 
 ## 9. Next Topic
 
-**[→ JS Runtime](../02-js-runtime/README.md)** — Understand how JavaScript code executes behind the scenes, including the engine, call stack, and execution context.
+**[→ 02 - JS Runtime](../02-js-runtime/README.md)** — Understand how JavaScript code executes behind the scenes, including the engine, call stack, and execution context.
 
 ---
 

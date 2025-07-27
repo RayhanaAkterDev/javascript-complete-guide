@@ -91,7 +91,7 @@ These attributes help optimize load performance and control execution order.
 
 ## 7. Next Topic
 
-**[→ Statements & Expressions](../04-statements-expressions/README.md)** — Understand JavaScript syntax building blocks and how they work.
+**[→ 04 - Statements & Expressions](../04-statements-expressions/README.md)** — Understand JavaScript syntax building blocks and how they work.
 
 ---
 

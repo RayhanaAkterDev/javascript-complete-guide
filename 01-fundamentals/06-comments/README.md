@@ -86,7 +86,7 @@ See files in the _`05-comments`_ folder for working demos:
 
 ## 6. Next Topic
 
-**[→ 06 - Functions](../06-functions/README.md)** — Understand how to define, invoke, and work with functions in JavaScript.
+**[→ 07 - Variables](../07-variables/README.md)** — Learn how to declare and manage variables using `var`, `let`, and `const`, including scoping and hoisting behaviors.
 
 ---
 
