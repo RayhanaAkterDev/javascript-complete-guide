@@ -124,7 +124,7 @@ See files in the _`04-statements-expressions`_ folder for a working demo:
 
 ## 7. Next Topic
 
-**[→ 05 - Keywords](../05-keywords/README.md)** — Learn how to document code using comments and understand their best usage in clean coding.
+**[→ 05 - Keywords](../05-keywords/README.md)** — Understand reserved words in JavaScript, their usage in syntax, and how to avoid naming conflicts in your code.
 
 ---
 
