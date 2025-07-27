@@ -141,7 +141,7 @@ See files in the _`09-type-conversion-coercion`_ folder for working demos:
 
 ## 8. Next Topic
 
-**[→ 10 - Operators & Expressions](../10-operators-expressions/README.md)** — Explore how different JavaScript operators work and interact with values and types.
+**[→ 10 - Operators](../10-operators/README.md)** — Explore various JavaScript operators and how they operate on values and types.
 
 ---
 
