@@ -1,25 +1,26 @@
 {
-  "name": "javascript-core-concepts",
-  "version": "1.0.0",
-  "description": "A complete, **hands-on** JavaScript learning guide from basics to advanced topics.  \r Learn core concepts with clear explanations and practical examples to build real-world skills.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RayhanaAkterDev/javascript-core-concepts.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RayhanaAkterDev/javascript-core-concepts/issues"
-  },
-  "homepage": "https://github.com/RayhanaAkterDev/javascript-core-concepts#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.32.0",
-    "eslint": "^9.32.0",
-    "globals": "^16.3.0"
-  }
+    "name": "javascript-core-concepts",
+    "version": "1.0.0",
+    "description": "A complete, **hands-on** JavaScript learning guide from basics to advanced topics.  \r Learn core concepts with clear explanations and practical examples to build real-world skills.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RayhanaAkterDev/javascript-core-concepts.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RayhanaAkterDev/javascript-core-concepts/issues"
+    },
+    "homepage": "https://github.com/RayhanaAkterDev/javascript-core-concepts#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.32.0",
+        "eslint": "^9.32.0",
+        "globals": "^16.3.0"
+    }
 }
