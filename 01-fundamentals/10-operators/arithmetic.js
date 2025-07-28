@@ -45,3 +45,5 @@ console.log('false + 1 =', false + 1); // 1 (false coerced to 0)
     Operators follow precedence rules.
     Use parentheses to control evaluation order.
 */
+
+// minor lint-trigger comment
