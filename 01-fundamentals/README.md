@@ -1,52 +1,52 @@
 # 01 - JavaScript Fundamentals
 
-**Tags:** javascript, basics, learning-path, core-concepts  
-**Purpose:** Build a solid foundation in JavaScript’s syntax, structure, and runtime behavior.  
-**Overview:** Understand how JavaScript executes code, manages data, makes decisions, and controls flow across environments like browsers and Node.js.  
-Master these fundamentals before moving on to advanced topics like DOM manipulation, async programming, and real-world applications.
+This module helps you build a solid foundation in JavaScript — how it runs,
+handles data, makes decisions, and controls logic. These fundamentals are
+crucial whether you're building apps, learning frameworks, or preparing for interviews.
 
 ---
 
-## Core Topics Covered
+## 📚 Topics Covered
 
-1. [JS Introduction](./01-js-intro/README.md): What JavaScript is and its role in web development  
-2. [How JavaScript Runs](./02-js-runtime/README.md): Understanding JS engines, runtime, and environment differences  
-3. [Embedding JavaScript](./03-embedding-js/README.md): Inline, internal, and external script embedding  
-4. [Statements & Expressions](./04-statements-expressions/README.md): Core syntax building blocks  
-5. [Keywords](./05-keywords/README.md): JavaScript reserved words and identifiers essential for syntax and structure  
-6. [Comments](./06-comments/README.md): Single-line and multi-line comments with best practices  
-7. [Variables](./07-variables/README.md): Declaration types (`var`, `let`, `const`) and scoping rules  
-8. [Data Types](./08-data-types/README.md): Primitive vs reference types and type checking  
-9. [Type Conversion & Coercion](./09-type-conversion-coercion/README.md): Implicit and explicit type conversions  
-10. [Operators](./10-operators/README.md): Arithmetic, comparison, logical, ternary, and bitwise operators  
-11. [Input & Output](./11-io-methods/README.md): Logging and browser interaction (`console.log`, `alert`, `prompt`)  
-12. [String Manipulation](./12-string-manipulation/README.md): String methods and template literals  
-13. [Conditionals](./13-conditionals/README.md): Control flow with `if`, `else`, `else if`, and `switch`  
-14. [Loops](./14-loops/README.md): Looping constructs and control (`for`, `while`, `do...while`, `for...of`, `for...in`)  
-15. [Functions](./15-functions/README.md): Function declaration, expression, arrow functions, parameters, and returns  
-16. [Scope](./16-scope/README.md): Global, local, block, and lexical scope explained  
-17. [Hoisting](./17-hoisting/README.md): Variable and function hoisting, and the Temporal Dead Zone  
-18. [Strict Mode](./18-strict-mode/README.md): Enabling safer JavaScript with `"use strict"`
-
----
-
-## How to Approach This Module
-
-- Follow the topics in sequence for progressive learning.  
-- Read each README carefully and test provided code samples.  
-- Practice running examples in browser consoles or Node.js environments.  
-- Pay close attention to complex topics such as scope, type coercion, and hoisting.  
-- Experiment with modifying code to deepen understanding.  
-- Revisit challenging concepts as needed to reinforce learning.
+| #   | Topic Name                                                 | Description                                                                 |
+|-----|------------------------------------------------------------|-----------------------------------------------------------------------------|
+| 01  | [JS Introduction](./01-js-intro/README.md)                 | Understand what JavaScript is and where it runs                             |
+| 02  | [How JavaScript Runs](./02-js-runtime/README.md)           | Learn about JS engines and execution environments                           |
+| 03  | [Embedding JavaScript](./03-embedding-js/README.md)        | Different ways to add JS to an HTML file                                    |
+| 04  | [Statements & Expressions](./04-statements-expressions/README.md) | Basic building blocks of JS code                                 |
+| 05  | [Keywords](./05-keywords/README.md)                        | Reserved words used to structure JS logic                                   |
+| 06  | [Comments](./06-comments/README.md)                        | How to write clean, readable code with proper comments                      |
+| 07  | [Variables](./07-variables/README.md)                      | Declare values using `var`, `let`, and `const` with scoping rules           |
+| 08  | [Data Types](./08-data-types/README.md)                    | Understand primitives and reference types                                   |
+| 09  | [Type Conversion & Coercion](./09-type-conversion-coercion/README.md) | Learn how JS converts types behind the scenes                 |
+| 10  | [Operators](./10-operators/README.md)                      | Arithmetic, comparison, logical, and assignment operators                   |
+| 11  | [Input & Output](./11-io-methods/README.md)                | Interact with users using `console`, `prompt()`, `alert()`                  |
+| 12  | [String Manipulation](./12-string-manipulation/README.md) | Handle text using string methods and template literals                      |
+| 13  | [Conditionals](./13-conditionals/README.md)                | Write logic using `if`, `else`, `else if`, and `switch`                     |
+| 14  | [Loops](./14-loops/README.md)                              | Repeat actions using `for`, `while`, `do...while`, and `for...of` loops     |
+| 15  | [Functions](./15-functions/README.md)                      | Define and reuse logic using functions and parameters                       |
+| 16  | [Scope](./16-scope/README.md)                              | Understand how variables are accessed in different contexts                 |
+| 17  | [Hoisting](./17-hoisting/README.md)                        | Learn how JS moves variable and function declarations internally            |
+| 18  | [Strict Mode](./18-strict-mode/README.md)                  | Enforce cleaner code using `"use strict"`                                   |
 
 ---
 
-## Next Up
+## 💡 How to Use This Module
 
-[02 - Data Structures](../02-data-structures/README.md) — Explore how JavaScript organizes and manages data with arrays, objects, sets, and more.
+- 📖 **Start at the top** and follow the topics in order. Each builds on the last.
+- 🧪 **Run the code examples** in your browser’s console or with Node.js.
+- ✏️ **Modify the code** yourself — break things, fix them, experiment.
+- 🔁 **Revisit tricky topics** like coercion, scope, and hoisting as needed.
+- 🧠 Don’t memorize — **understand the “why” behind each concept**.
 
 ---
 
-## Navigation
+## 🔜 Next Up
 
-[Back to JavaScript Core Concepts](../README.md)
+**[→ 02 - Data Structures](../02-data-structures/README.md)** — Learn how to store, organize, and access data using arrays, objects, sets, and more.
+
+---
+
+## 🔗 Navigation
+
+[← Back to JavaScript Core Concepts](../README.md)
