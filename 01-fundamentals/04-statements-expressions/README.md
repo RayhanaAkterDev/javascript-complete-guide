@@ -1,40 +1,25 @@
 # 04 - Statements & Expressions
 
-**Tags:** `javascript`, `syntax`, `expressions`, `statements`, `language-core`  
-**Purpose:** Understand the foundational syntax building blocks of JavaScript—statements and expressions—and how they form the structure of executable code.  
-**Overview:** This topic explains the core difference between expressions and statements, where each is used, and why understanding this distinction is essential for writing valid, clean JavaScript logic.
-
----
-
-_Table of Contents:_
-
-- [04 - Statements \& Expressions](#04---statements--expressions)
-  - [1. What Are Expressions?](#1-what-are-expressions)
-  - [2. What Are Statements?](#2-what-are-statements)
-  - [3. Key Differences](#3-key-differences)
-  - [4. Common Examples](#4-common-examples)
-  - [5. Best Practices](#5-best-practices)
-  - [6. Code Example Files](#6-code-example-files)
-  - [7. Next Topic](#7-next-topic)
-  - [8. Navigation](#8-navigation)
+JavaScript is written using two core building blocks: **expressions** and **statements**.  
+Understanding how they work—and how they differ—is crucial for writing correct, clean, and predictable code.
 
 ---
 
 ## 1. What Are Expressions?
 
-An **expression** is any valid unit of code that evaluates to a value.
+An **expression** is any piece of code that **produces a value**.
 
-- It does **not** require a semicolon unless it's used as a statement.
-- Expressions can be **standalone** or **embedded inside statements**.
-- Can be assigned, passed as arguments, or returned from functions.
+- Can be assigned to variables, returned from functions, or used inside statements  
+- Can be simple (a literal) or complex (with operators)  
+- Often used inside other expressions or as part of statements
 
 **Examples:**
 
 ```js
-5 + 3            // Expression → evaluates to 8
-"Hi" + " there"  // Expression → evaluates to "Hi there"
-true             // Expression → value is true
-x * 2            // Expression → evaluates based on variable value
+5 + 3            // ➝ 8
+"Hi" + " there"  // ➝ "Hi there"
+true             // ➝ true
+x * 2            // ➝ depends on value of x
 ```
 
 ---
@@ -43,59 +28,48 @@ x * 2            // Expression → evaluates based on variable value
 
 A **statement** is a complete instruction that performs an action.
 
-- Typically ends with a semicolon (`;`)
-- Can contain one or more expressions
-- Controls the flow of execution in the program
+- Usually ends with a semicolon `;`  
+- Can include one or more expressions  
+- Used to declare, assign, loop, or control program flow
 
 **Examples:**
 
 ```js
-// Declaration statement
-let x = 10;
-
-// Assignment statement with expression
-x = x + 5;
-
-// Conditional statement
-if (x > 10) {
-  console.log("x is big");
-}
-
-// Loop statement
-for (let i = 0; i < 5; i++) {
-  console.log(i);
-}
+let x = 10;               // Declaration + assignment
+x = x + 5;                // Assignment
+if (x > 10) {...}         // Conditional
+for (let i = 0; ...) {...}  // Loop
 ```
 
 ---
 
 ## 3. Key Differences
 
-| Aspect             | Expression                | Statement                |
-| ------------------ | ------------------------- | ------------------------ |
-| Resolves to        | A value                   | An action or instruction |
-| Usage              | Can be part of other code | Forms a full instruction |
-| Can end with `;`   | Not always necessary      | Usually ends with `;`    |
-| Executes           | As part of a statement    | Executes a full task     |
-| Example            | `2 * 3`                   | `let x = 2 * 3;`         |
+| Feature      | Expression                  | Statement                    |
+|--------------|-----------------------------|-------------------------------|
+| Output       | Produces a value            | Performs an action            |
+| Usage        | Part of statements or other expressions | Stands alone as a complete unit |
+| Ends With `;`| Optional (unless standalone) | Usually required              |
+| Purpose      | Calculate, return, assign   | Declare, branch, loop, control flow |
+| Example      | `2 * 3`                     | `let x = 2 * 3;`              |
 
 ---
 
 ## 4. Common Examples
 
-- Expression inside a statement:
+- **Expression inside a statement:**
 
 ```js
-let total = price * quantity;  // "price * quantity" is the expression
+let total = price * quantity;
 ```
 
-- Expression-only return:
+- **Expression used as return:**
 
 ```js
-return a + b; // "a + b" is the expression
+return a + b;
 ```
 
-- Statement containing expressions:
+- **Statement using expression in condition:**
 
 ```js
 if (x > 5) {
@@ -105,29 +79,46 @@ if (x > 5) {
 
 ---
 
-## 5. Best Practices
+## 5. 💡 Best Practices
 
-- Avoid confusing expressions with statements when writing conditional or return logic.  
-- Keep expressions small and clear when nested inside statements.  
-- Always terminate statements with `;` for consistency and to avoid automatic semicolon insertion pitfalls.  
-- Use expressions to keep logic **modular** and **reusable**, such as storing them in functions or variables.  
-
----
-
-## 6. Code Example Files
-
-See files in the _`04-statements-expressions`_ folder for a working demo:
-
-- [`index.js`](index.js)
+✅ Use expressions to write flexible, modular logic  
+✅ Keep expressions clean and focused when used inside statements  
+✅ Always end statements with `;` to avoid ASI issues  
+❌ Don’t confuse an expression for a statement—especially in conditionals
 
 ---
 
-## 7. Next Topic
+## 📂 Demo Files
 
-**[→ 05 - Keywords](../05-keywords/README.md)** — Understand reserved words in JavaScript, their usage in syntax, and how to avoid naming conflicts in your code.
+Try the working examples in:
+
+- [`index.js`](./index.js)
 
 ---
 
-## 8. Navigation
+## 🧪 Try It Online
+
+Experiment with the concepts on:
+
+- [JSConsole](https://jsconsole.com) — Best for quick console-based testing  
+- [JSFiddle](https://jsfiddle.net) — Useful for testing HTML + JS together
+
+---
+
+## 📚 Further Reading
+
+- [freeCodeCamp – Statement vs Expression in Programming](https://www.freecodecamp.org/news/statement-vs-expression-whats-the-difference-in-programming/) — Provides clear, foundational definitions and relatable examples :contentReference
+- [Launch School – JavaScript Expressions and Statements](https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74) — Separates definitions and shows how assignment both fits and blurs roles
+- [Josh W. Comeau – Statements vs Expressions Explained](https://www.joshwcomeau.com/javascript/statements-vs-expressions/) — Beginner-friendly explanation with practical analogies and modern context
+
+---
+
+## 🔗 Next Topic
+
+**[→ 05 - Keywords](../05-keywords/README.md)** — Learn the role of reserved words in JavaScript and how to avoid naming conflicts.
+
+---
+
+## 🧭 Navigation
 
 [← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
