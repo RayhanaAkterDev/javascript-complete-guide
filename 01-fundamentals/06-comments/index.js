@@ -1,35 +1,35 @@
 // =========================
-// 05 - Comments in JavaScript
+// 06 - Comments in JavaScript
 // =========================
 
-// This is a single-line comment
-// It explains the next line of code
-
-let userName = 'Sumaya'; // Store user's name
+// Single-line comment: describes the next code line
+let userName = 'Sumaya'; // Store the user's name
 
 /*
-    This block is used to store the user's basic info.
-    Using comments like this helps other developers understand
-    the purpose of grouped code.
+  Multi-line comment:
+  Groups related variables with explanations.
+  Useful for documenting purpose or context.
 */
 let age = 22;
 let isStudent = true;
 
-// TODO: Add function to validate user input
+// TODO: Implement function to validate user input
 
 /*
-    Multi-line comments are helpful when
-    documenting sections or complex logic.
+  Multi-line comments help explain
+  complex logic or sections clearly.
 */
 function greetUser(name) {
-    // Explain why we're using template literals
-    return `Hello, ${name}! 👋`;
+  // Using template literals for readable output
+  return `Hello, ${name}! 👋`;
 }
 
 console.log(greetUser(userName)); // Output: Hello, Sumaya!
 
-// FIXME: Update this calculation if we change age rules
+// FIXME: Adjust this if age-based rules change
 let yearsToGraduate = 4 - 2; // Assuming 2 years completed
 
-// Example of disabling a line during debugging
+// Example: Temporarily disable this for debugging
 // console.log("Debug: age =", age);
+
+// Note: Comments should be clear and concise

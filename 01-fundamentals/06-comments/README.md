@@ -1,51 +1,34 @@
 # 06 - Comments
 
-**Tags:** `javascript`, `comments`, `documentation`, `syntax`, `language-core`  
-**Purpose:** Learn how to write and use comments effectively in JavaScript to document code, improve readability, and assist debugging.  
-**Overview:** This topic covers different types of comments, their syntax, and best practices for writing meaningful comments that help maintain clean and understandable code.
-
----
-
-_Table of Contents:_
-
-- [06 - Comments](#06---comments)
-  - [1. What Are Comments?](#1-what-are-comments)
-  - [2. Types of Comments](#2-types-of-comments)
-    - [Single-line Comments](#single-line-comments)
-    - [Multi-line Comments](#multi-line-comments)
-  - [3. Why Use Comments?](#3-why-use-comments)
-  - [4. Best Practices](#4-best-practices)
-  - [5. Code Example Files](#5-code-example-files)
-  - [6. Next Topic](#6-next-topic)
-  - [7. Navigation](#7-navigation)
+Comments are **non-executable notes** in your code used to explain, clarify, or annotate.  
+They improve code readability, help debugging, and assist teamwork without affecting program execution.
 
 ---
 
 ## 1. What Are Comments?
 
-Comments are **non-executable lines** in your code used to explain, clarify, or annotate parts of the program.
+Comments are ignored by the JavaScript engine and exist purely for developer reference.
 
-- They help developers understand the purpose, logic, or context.
-- Comments are **ignored by the JavaScript engine** during execution.
+- Explain why certain code exists  
+- Clarify complex or non-obvious logic  
+- Leave notes for future work or debugging  
 
 ---
 
 ## 2. Types of Comments
 
-JavaScript supports two types of comments:
-
-### Single-line Comments
+### 2.1 Single-line Comments
 
 Start with `//` and extend to the end of the line.
 
 ```js
 // This is a single-line comment
-let x = 10; // Inline comment explaining the variable
+let x = 10; // Inline comment
 ```
 
-### Multi-line Comments
+### 2.2 Multi-line Comments
 
-Start with `/*` and end with `*/`, spanning multiple lines.
+Begin with `/*` and end with `*/`. Can span multiple lines.
 
 ```js
 /*
@@ -59,37 +42,54 @@ let y = 20;
 
 ## 3. Why Use Comments?
 
-- Explain complex or non-obvious code logic.  
-- Mark TODOs, FIXMEs, or notes for future work.  
-- Temporarily disable code during debugging.  
-- Provide documentation for functions, classes, or modules.  
+- Document purpose or intent of code sections
+- Leave TODOs, FIXMEs, or notes for collaborators
+- Temporarily disable code during testing or debugging
+- Provide context for complex logic or algorithms
 
 ---
 
-## 4. Best Practices
+## 💡 Best Practices
 
-- Write clear, concise, and relevant comments.
-- Avoid stating the obvious—comments should add value beyond the code itself.
-- Keep comments up to date with code changes.
-- Use comments to explain why something is done, not what is done.
-- Use consistent formatting for easier readability.
-
----
-
-## 5. Code Example Files
-
-See files in the _`05-comments`_ folder for working demos:
-
-- [`index.js`](index.js)  
+✅ Write clear, concise, and relevant comments
+✅ Avoid stating the obvious; add value beyond code itself
+✅ Keep comments up-to-date with code changes
+✅ Use comments to explain why something is done, not what is done
+✅ Maintain consistent comment style and formatting
 
 ---
 
-## 6. Next Topic
+## 📂 Demo Files
 
-**[→ 07 - Variables](../07-variables/README.md)** — Learn how to declare and manage variables using `var`, `let`, and `const`, including scoping and hoisting behaviors.
+Explore working examples to practice commenting:
+
+- [`index.js`](index.js)
 
 ---
 
-## 7. Navigation
+## 🧪 Try It Online
+
+Try out the examples interactively on:
+
+- [JSConsole](https://jsconsole.com) — Best for quick console-based testing  
+- [JSFiddle](https://jsfiddle.net) — Useful for testing HTML + JS together
+
+---
+
+## 📚 Further Reading
+
+- [MDN - JavaScript Comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#comments) — Official guide to comment syntax and usage  
+- [JavaScript.info - Comments](https://javascript.info/comments) — Clear explanations with examples  
+- [freeCodeCamp - Writing Good Comments](https://www.freecodecamp.org/news/writing-good-comments/) — Best practices for meaningful comments  
+
+---
+
+## 🔗 Next Topic
+
+**[→ 07 - Variables](../07-variables/README.md)** —  Learn how to declare and manage variables using `var`, `let`, and `const`.
+
+---
+
+## 🧭 Navigation
 
 [← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
