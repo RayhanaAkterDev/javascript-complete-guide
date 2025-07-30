@@ -1,125 +1,108 @@
 /*
-    Topic: keywords.js
+  Topic: 05 - JavaScript Keywords
 
-    This file demonstrates usage of common JavaScript keywords
-    categorized by their purpose in the language.
-
-    Keywords are reserved words used to define JS syntax and structure.
-    They cannot be used as variable, function, or class names.
+  This file demonstrates common JavaScript keywords categorized by their purpose.
+  It focuses on clarity and simplicity for beginners, following modern best practices.
+  Keywords are reserved words that define JS syntax and cannot be used as identifiers.
 */
 
 /* ---------------------------------
-    1. Variable Declarations
+  1. Variable Declarations
+  Use let and const for block-scoped variables and constants.
 --------------------------------- */
-var x = 10; // function-scoped variable
-let y = 20; // block-scoped variable (ES6)
-const PI = 3.14; // block-scoped constant (ES6)
+let age = 25;           // Variable that can change
+const name = 'Sumaya';  // Constant value that cannot change
+
+console.log(age, name);
 
 /* ---------------------------------
-    2. Control Flow
+  2. Control Flow Keywords
+  Use keywords to make decisions and control program flow.
 --------------------------------- */
-if (x < y) {
-    console.log('x is less than y');
+if (age >= 18) {
+  console.log('Adult');
 } else {
-    console.log('x is greater or equal to y');
-}
-
-switch (x) {
-    case 5:
-        console.log('x is 5');
-        break;
-    case 10:
-        console.log('x is 10');
-        break;
-    default:
-        console.log('x is something else');
+  console.log('Minor');
 }
 
 /* ---------------------------------
-    3. Loops
+  3. Loops
+  Repeat tasks using for and while loops.
 --------------------------------- */
 for (let i = 0; i < 3; i++) {
-    console.log('For loop i =', i);
+  console.log('For loop iteration:', i);
 }
 
-let j = 0;
-while (j < 3) {
-    console.log('While loop j =', j);
-    j++;
+let count = 0;
+while (count < 3) {
+  console.log('While loop count:', count);
+  count++;
 }
 
 /* ---------------------------------
-    4. Functions
+  4. Functions
+  Define reusable blocks of code with the function keyword.
 --------------------------------- */
-function greet(name) {
-    return `Hello, ${name}!`;
+function greet(userName) {
+  return `Hello, ${userName}!`;
 }
 
-console.log(greet('Sumaya'));
-
-/* Generator function using 'yield' */
-function* idGenerator() {
-    let id = 0;
-    while (true) {
-        yield id++;
-    }
-}
-const gen = idGenerator();
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
+console.log(greet(name));
 
 /* ---------------------------------
-    5. Error Handling
+  5. Error Handling
+  Use try-catch-finally to handle errors gracefully.
 --------------------------------- */
 try {
-    throw new Error('Something went wrong!');
-} catch (err) {
-    console.log('Caught error:', err.message);
+  throw new Error('Something went wrong!');
+} catch (error) {
+  console.log('Caught error:', error.message);
 } finally {
-    console.log('Cleanup runs regardless of error');
+  console.log('Cleanup code runs regardless of errors');
 }
 
 /* ---------------------------------
-    6. Classes & Modules (basic usage)
+  6. Classes (Basic Example)
+  Use class and extends keywords to create and inherit classes.
 --------------------------------- */
 class Animal {
-    constructor(name) {
-        this.name = name;
-    }
-
-    speak() {
-        console.log(`${this.name} makes a sound.`);
-    }
+  constructor(type) {
+    this.type = type;
+  }
+  speak() {
+    console.log(`${this.type} makes a sound.`);
+  }
 }
 
 class Dog extends Animal {
-    speak() {
-        console.log(`${this.name} barks.`);
-    }
+  speak() {
+    console.log(`${this.type} barks.`);
+  }
 }
 
-const pet = new Dog('Droopy');
-pet.speak(); // Droopy barks.
+const pet = new Dog('Dog');
+pet.speak();
 
 /* ---------------------------------
-    7. Logical & Contextual
+  7. Logical & Contextual Keywords
+  Examples of typeof, instanceof, and in keywords.
 --------------------------------- */
-let isActive = true;
-let result = typeof isActive; // "boolean"
-let isDog = pet instanceof Dog; // true
-let hasName = 'name' in pet; // true
-
-console.log(result, isDog, hasName);
+console.log(typeof age);            // "number"
+console.log(pet instanceof Dog);   // true
+console.log('type' in pet);         // true
 
 /* ---------------------------------
-    8. Strict Mode
+  8. Strict Mode
+  Use 'use strict' to enforce stricter parsing and error handling.
 --------------------------------- */
-('use strict');
-// undeclaredVar = 50; // ❌ ReferenceError in strict mode
+'use strict';
+// Uncommenting below line causes ReferenceError in strict mode:
+// undeclaredVar = 10;
 
 /* ---------------------------------
-    9. Invalid Keyword Usage (Examples Only)
+  9. Invalid Keyword Usage (Examples)
+  These are invalid uses of reserved keywords (commented out).
 --------------------------------- */
-// let let = 5;          // ❌ SyntaxError
-// function return() {} // ❌ SyntaxError
-// const class = 10;     // ❌ SyntaxError
+// let let = 5;           // ❌ SyntaxError: 'let' is reserved
+// function return() {}   // ❌ SyntaxError: 'return' is reserved
+// const class = 10;      // ❌ SyntaxError: 'class' is reserved

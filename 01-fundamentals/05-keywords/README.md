@@ -1,37 +1,15 @@
 # 05 - JavaScript Keywords
 
-**Tags:** `javascript`, `keywords`, `syntax`, `reserved-words`, `best-practices`  
-**Purpose:** Understand what JavaScript keywords are, why they matter, and how they affect your ability to name variables or use language features.  
-**Overview:** JavaScript includes a list of reserved words (keywords) that have special meanings in the language. These cannot be used as variable names, function names, or identifiers. This topic introduces keywords by category, demonstrates correct and incorrect usage, and highlights naming pitfalls to avoid.
-
----
-
-_Table of Contents:_
-
-- [05 - JavaScript Keywords](#05---javascript-keywords)
-  - [1. What Are JavaScript Keywords?](#1-what-are-javascript-keywords)
-  - [2. Common JavaScript Keywords](#2-common-javascript-keywords)
-    - [2.1 Variable Declarations](#21-variable-declarations)
-    - [2.2 Control Flow](#22-control-flow)
-    - [2.3 Functions](#23-functions)
-    - [2.4 Error Handling](#24-error-handling)
-    - [2.5 Classes \& Modules](#25-classes--modules)
-    - [2.6 Logical \& Contextual](#26-logical--contextual)
-    - [2.7 Strict Mode](#27-strict-mode)
-  - [3. Invalid Keyword Usage](#3-invalid-keyword-usage)
-  - [4. Best Practices](#4-best-practices)
-  - [5. Code Example Files](#5-code-example-files)
-  - [6. Next Topic](#6-next-topic)
-  - [7. Navigation](#7-navigation)
+JavaScript keywords are **reserved words** with special meaning in the language syntax.  
+They form the language structure and cannot be used as variable, function, or class names.  
+Understanding keywords helps avoid syntax errors and naming conflicts.
 
 ---
 
 ## 1. What Are JavaScript Keywords?
 
-Keywords are **reserved words** that have predefined meanings in JavaScript syntax.  
-They form the language structure and control flow. You **cannot** use them as identifiers for variables, functions, or class names.
-
-**Example:**
+Keywords are predefined and reserved by JavaScript to define program structure and control flow.  
+Using them as identifiers results in syntax errors.
 
 ```js
 let return = 5; // ❌ SyntaxError: Unexpected token 'return'
@@ -41,13 +19,11 @@ let return = 5; // ❌ SyntaxError: Unexpected token 'return'
 
 ## 2. Common JavaScript Keywords
 
-Here’s a categorized list of commonly used keywords:
-
 ### 2.1 Variable Declarations
 
-- `var` — Declares a function-scoped variable
-- `let` — Declares a block-scoped variable (ES6)
-- `const` — Declares a block-scoped constant (ES6)
+- `var` — function-scoped variable
+- `let` — block-scoped variable (ES6)
+- `const` — block-scoped constant (ES6)
 
 ### 2.2 Control Flow
 
@@ -58,7 +34,7 @@ Here’s a categorized list of commonly used keywords:
 ### 2.3 Functions
 
 - `function`, `return`
-- `yield` — Used in generator functions (ES6)
+- `yield` — generator functions (ES6)
 
 ### 2.4 Error Handling
 
@@ -76,13 +52,13 @@ Here’s a categorized list of commonly used keywords:
 
 ### 2.7 Strict Mode
 
-- "`use strict`" — Not a keyword, but a directive that activates stricter parsing and error handling
+- "`use strict`" — directive to enforce stricter parsing (not a keyword)
 
 ---
 
 ## 3. Invalid Keyword Usage
 
-You cannot use reserved keywords as variable names or function identifiers.
+You cannot use reserved keywords as variable or function names:
 
 ```js
 let let = 5;           // ❌ SyntaxError
@@ -92,29 +68,45 @@ const if = 10;         // ❌ SyntaxError
 
 ---
 
-## 4. Best Practices
+## 💡 Best Practices
 
-- Always use descriptive, non-reserved names for variables and functions.  
-- Avoid words like `default`, `class`, `new`, or `return` in identifiers.  
-- Prefix identifiers with meaningful context (`isValid`, `userCount`, `appConfig`) to reduce conflicts.  
-- Stay updated on new keywords added in ECMAScript versions (e.g., `await`, `yield`, `import`).
+✅ Use clear, descriptive names that are not reserved keywords  
+✅ Avoid using or mimicking keywords in identifiers  
+✅ Use meaningful prefixes like `is`, `has`, `get`, `set` to avoid conflicts  
+✅ Keep updated with new ECMAScript keywords like `await`, `yield`, `import`  
 
 ---
 
-## 5. Code Example Files
+## 📂 Demo Files
 
-See files in the _`05-keywords`_ folder for usage examples:
+Explore working examples to practice `js` keywords:
 
 - [`index.js`](index.js)
 
 ---
 
-## 6. Next Topic
+## 🧪 Try It Online
+
+Try out the examples interactively on:
+
+- [JSConsole](https://jsconsole.com) — Best for quick console-based testing  
+- [JSFiddle](https://jsfiddle.net) — Useful for testing HTML + JS together
+
+---
+
+## 📚 Further Reading
+
+- [MDN - JavaScript Keywords](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) — Comprehensive list and explanation of reserved keywords in JavaScript
+- [W3Schools - JavaScript Reserved Words](https://www.w3schools.com/js/js_reserved.asp) — Beginner-friendly list of reserved keywords with examples
+
+---
+
+## 🔗 Next Topic
 
 **[→ 06 - comments](../06-comments/README.md)** — Learn how to declare and manage variables using `var`, `let`, and `const`.
 
 ---
 
-## 7. Navigation
+## 🧭 Navigation
 
 [← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
