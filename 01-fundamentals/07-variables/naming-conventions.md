@@ -1,25 +1,6 @@
-# Naming Conventions for Variables in JavaScript
+# 07.1 - Naming Conventions for Variables
 
-**Tags:** `javascript`, `variables`, `naming-conventions`, `best-practices`  
-**Purpose:** Understand the rules and best practices for naming variables in JavaScript to write clean, readable, and maintainable code.  
-**Overview:** This topic covers the syntax rules for valid variable names, common naming conventions for different types of identifiers, and examples of invalid names to avoid.
-
----
-
-_Table of Contents:_
-
-- [Naming Conventions for Variables in JavaScript](#naming-conventions-for-variables-in-javascript)
-  - [1. Rules for Writing Variable Names](#1-rules-for-writing-variable-names)
-  - [2. Common Naming Conventions](#2-common-naming-conventions)
-    - [2.1 Variables and Functions](#21-variables-and-functions)
-    - [2.2 Boolean Variables](#22-boolean-variables)
-    - [2.3 Constants](#23-constants)
-    - [2.4 Class and Component Names](#24-class-and-component-names)
-  - [3. Invalid Variable Names](#3-invalid-variable-names)
-    - [3.1 Name Starts with Digit](#31-name-starts-with-digit)
-    - [3.2 Using Implicit Globals](#32-using-implicit-globals)
-    - [3.3 Reserved Keywords](#33-reserved-keywords)
-  - [4. Navigation](#4-navigation)
+Naming conventions help write clean, readable, and maintainable code by following consistent rules for naming variables.
 
 ---
 
@@ -31,7 +12,7 @@ _Table of Contents:_
 - Names must **begin** with a letter, underscore `_`, or dollar sign `$`.  
 - Avoid using **reserved keywords** like `if`, `const`, `return`.  
 - Use **descriptive names** that convey meaning (e.g., `sellingPrice` instead of `x`).  
-- Since JS is dynamically typed, indicating variable type in the name can help (e.g., `orderNumber` for numeric ID).
+- Since JavaScript is dynamically typed, indicating variable type in the name can help (e.g., `orderNumber` for numeric ID).
 
 ---
 

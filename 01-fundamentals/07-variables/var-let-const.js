@@ -1,74 +1,62 @@
 /*
-    Topic: var-let-const.js
+  Topic: var-let-const.js
 
-    This file demonstrates the differences between var, let, and const
-    in terms of:
-        - Declaration behavior
-        - Reassignment
-        - Redeclaration
-        - Basic block visibility
+  Demonstrates differences between var, let, and const in:
+    - Declaration behavior
+    - Redeclaration
+    - Reassignment
+    - Basic block scope visibility
 
-    Note: For a deeper understanding of scope rules,
-    refer to the separate file: scope.js
+  For detailed scope rules, see: scope.js
 */
 
-/* ---------------------------------
-    1. var — function-scoped
-    - Can be redeclared
-    - Can be reassigned
---------------------------------- */
-var a = 10;
-var a = 20; // ✅ Redeclaration allowed
-a = 30; // ✅ Reassignment allowed
-console.log('var a:', a); // 30
+// --- var: function-scoped, redeclarable, hoisted with undefined ---
 
-/* ---------------------------------
-    2. let — block-scoped
-    - Cannot be redeclared in the same scope
-    - Can be reassigned
---------------------------------- */
-let b = 40;
-// let b = 50; // ❌ SyntaxError: Identifier 'b' has already been declared
-b = 60; // ✅ Reassignment allowed
-console.log('let b:', b); // 60
+var a = 10;           // initial assignment
+var a = 20;           // ✅ Redeclaration allowed
+a = 30;               // ✅ Reassignment allowed
 
-/* ---------------------------------
-    3. const — block-scoped
-    - Cannot be redeclared
-    - Cannot be reassigned
---------------------------------- */
-const c = 70;
-// const c = 80; // ❌ SyntaxError
-// c = 90;       // ❌ TypeError
-console.log('const c:', c); // 70
+console.log("var a:", a); // 30
 
-console.log('------');
+// --- let: block-scoped, no redeclaration, reassignment allowed ---
 
-/* ---------------------------------
-    4. Basic Block Behavior
-    Demonstrates that:
-    - var is NOT block-scoped (leaks out)
-    - let and const ARE block-scoped
---------------------------------- */
+let b = 40;           // initial assignment
+
+// ❌ SyntaxError: Identifier 'b' has already been declared
+// let b = 50;
+
+b = 60;               // ✅ Reassignment allowed
+
+console.log("let b:", b); // 60
+
+// --- const: block-scoped, no redeclaration or reassignment ---
+
+const c = 70;         // initial assignment
+
+// ❌ SyntaxError: Identifier 'c' has already been declared
+// const c = 80;
+
+// ❌ TypeError: Assignment to constant variable
+// c = 90;
+
+console.log("const c:", c); // 70
+
+// --- Scope behavior in blocks: var leaks outside block, let and const do not ---
+
 if (true) {
-    var d = 100;
-    let e = 200;
-    const f = 300;
+    var d = 100;        // function-scoped
+    let e = 200;        // block-scoped
+    const f = 300;      // block-scoped
 
-    console.log('Inside block: var d =', d); // 100
-    console.log('Inside block: let e =', e); // 200
-    console.log('Inside block: const f =', f); // 300
+    console.log("Inside block → var d:", d);   // 100
+    console.log("Inside block → let e:", e);   // 200
+    console.log("Inside block → const f:", f); // 300
 }
 
-console.log('Outside block: var d =', d); // 100
-// console.log(e); // ❌ ReferenceError
-// console.log(f); // ❌ ReferenceError
+console.log("Outside block → var d:", d);     // 100
 
-console.log('------');
+// ❌ ReferenceError: e is not defined
+// console.log(e);
 
-/*
-    🔗 Note:
-    This file focuses only on how var, let, and const differ in their declaration behavior.
-    For in-depth understanding of scopes (global, function, block),
-    please refer to: scope.js
-*/
+// ❌ ReferenceError: f is not defined
+// console.log(f);
