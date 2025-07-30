@@ -13,31 +13,34 @@
         <title>03 - Embedded JavaScript</title>
     </head>
     <body>
-        <h1>Embedded JavaScript Examples</h1>
+        <h1>JavaScript Embedding Types</h1>
 
-        <h2>1. Inline Script</h2>
+        <!-- Inline Script -->
+        <section>
+            <h2>1. Inline Script</h2>
+            <button onclick="alert('Hello from inline script!')">
+                Click Me (Inline)
+            </button>
+        </section>
 
-        <!-- Inline script -->
-        <button onclick="alert('Hello from inline script!')">
-            Click Me (Inline)
-        </button>
+        <!-- Internal Script -->
+        <section>
+            <h2>2. Internal Script</h2>
+            <button id="internalBtn">Click Me (Internal)</button>
+            <script>
+                document
+                    .getElementById('internalBtn')
+                    .addEventListener('click', () => {
+                        alert('Hello from internal script!');
+                    });
+            </script>
+        </section>
 
-        <h2>2. Internal Script</h2>
-        <button id="internalBtn">Click Me (Internal)</button>
-
-        <h2>3. External Script</h2>
-        <button id="externalBtn">Click Me (External)</button>
-
-        <!-- Internal script -->
-        <script>
-            document
-                .getElementById('internalBtn')
-                .addEventListener('click', () => {
-                    alert('Hello from internal script!');
-                });
-        </script>
-
-        <!-- External script -->
-        <script src="./script.js" defer></script>
+        <!-- External Script -->
+        <section>
+            <h2>3. External Script</h2>
+            <button id="externalBtn">Click Me (External)</button>
+            <script src="./script.js" defer></script>
+        </section>
     </body>
 </html>
