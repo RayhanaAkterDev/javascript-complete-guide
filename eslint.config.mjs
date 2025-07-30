@@ -9,7 +9,7 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module', // ✅ FIXED HERE
+      sourceType: 'module',
       globals: globals.browser,
     },
     plugins: { js },
@@ -23,6 +23,9 @@ export default defineConfig([
       'no-redeclare': 'off',
       'use-isnan': 'off',
       'no-constant-binary-expression': 'off',
+
+      // ✅ Enforce 4 spaces per indentation level
+      indent: ['error', 4],
     },
   },
 ]);
