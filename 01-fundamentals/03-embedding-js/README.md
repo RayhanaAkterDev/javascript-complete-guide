@@ -70,19 +70,19 @@ Use these to **optimize load performance** and control script execution flow.
 
 ## 📂 Demo Files
 
-- [`index.html`](./index.html) — Shows all three embedding types  
-- [`script.js`](./script.js) — Sample external JavaScript file  
+Explore the examples to practice embedding-js concept:
 
-➡️ Open the HTML file in your browser and inspect the **Console** output.
+- [`index.html`](./index.html)
+- [`script.js`](./script.js)
 
 ---
 
 ## 🧪 Try It Online
 
-Experiment with the code instantly using these online editors:
+Try the examples interactively on:
 
-- [JSConsole](https://jsconsole.com) — Best for quick console-based testing  
-- [JSFiddle](https://jsfiddle.net) — Great for combining HTML, CSS, and JavaScript
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
+- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
 
 ---
 

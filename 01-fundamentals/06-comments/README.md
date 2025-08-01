@@ -61,7 +61,7 @@ let y = 20;
 
 ## 📂 Demo Files
 
-Explore working files to practice commenting:
+Explore the examples to practice commenting:
 
 - [`index.js`](index.js)
 
@@ -69,9 +69,9 @@ Explore working files to practice commenting:
 
 ## 🧪 Try It Online
 
-Test the examples interactively:
+Try the examples interactively on:
 
-- [JSConsole](https://jsconsole.com) — Quick console testing  
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
 - [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
 
 ---

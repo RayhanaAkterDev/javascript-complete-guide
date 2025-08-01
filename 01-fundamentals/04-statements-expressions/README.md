@@ -90,7 +90,7 @@ if (x > 5) {
 
 ## 📂 Demo Files
 
-Try the working examples in:
+Explore the examples to practice statements and expression concept:
 
 - [`index.js`](./index.js)
 
@@ -98,10 +98,10 @@ Try the working examples in:
 
 ## 🧪 Try It Online
 
-Experiment with the concepts on:
+Try the examples interactively on:
 
-- [JSConsole](https://jsconsole.com) — Best for quick console-based testing  
-- [JSFiddle](https://jsfiddle.net) — Useful for testing HTML + JS together
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
+- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
 
 ---
 

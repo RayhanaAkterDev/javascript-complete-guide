@@ -1,30 +1,42 @@
 /*
   Topic: 04 - Statements & Expressions
 
-  Key Idea:
-  - Statements do things (actions)
-  - Expressions produce values (data)
-  Understanding this helps write clean, bug-free code.
+  Demonstrates the difference between statements and expressions:
+    - Statements perform actions
+    - Expressions produce values
+  Understanding this distinction helps write clear, bug-free code.
 */
 
-// 1. Declaration statement with an expression
-const number = 5; // '5' is an expression; the whole line is a statement
+// --- 1. Declaration Statement with Expression ---
+// '5' is an expression; the whole line is a statement.
 
-// 2. Assignment with an expression
-const doubled = number * 2; // 'number * 2' is an expression
+const number = 5;
 
-// 3. Conditional statement uses an expression as condition
+// --- 2. Assignment with Expression ---
+// 'number * 2' is an expression assigned to doubled.
+
+const doubled = number * 2;
+
+// --- 3. Conditional Statement Using Expression as Condition ---
+// if statement uses expression 'doubled > 5' as condition.
+
 if (doubled > 5) {
-  console.log('Doubled value is greater than 5'); // Statement: function call
+    console.log('Doubled value is greater than 5'); // Statement: function call
 }
 
-// 4. Function declaration statement
+// --- 4. Function Declaration Statement ---
+// Defines a function using a statement.
+
 function greet(name) {
-  return 'Hello, ' + name; // Expression: concatenation
+    return 'Hello, ' + name; // Expression: string concatenation
 }
 
-// 5. Calling a function (expression) inside a statement
-console.log(greet('Sumaya')); // Statement: function call with expression argument
+// --- 5. Function Call Expression Inside Statement ---
+// console.log call is a statement; greet('Sumaya') is an expression argument.
 
-// 6. Expression by itself (rare in real code but valid)
-3 + 4; // Expression only — no effect here
+console.log(greet('Sumaya'));
+
+// --- 6. Expression by Itself ---
+// An expression alone; valid but has no effect here.
+
+3 + 4;

@@ -79,7 +79,7 @@ const if = 10;         // ❌ SyntaxError
 
 ## 📂 Demo Files
 
-Explore working examples to practice `js` keywords:
+Explore the examples to practice `keyword` concepts:
 
 - [`index.js`](index.js)
 
@@ -87,10 +87,10 @@ Explore working examples to practice `js` keywords:
 
 ## 🧪 Try It Online
 
-Try out the examples interactively on:
+Try the examples interactively on:
 
-- [JSConsole](https://jsconsole.com) — Best for quick console-based testing  
-- [JSFiddle](https://jsfiddle.net) — Useful for testing HTML + JS together
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
+- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
 
 ---
 

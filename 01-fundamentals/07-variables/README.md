@@ -147,7 +147,7 @@ For details, see the [Naming Conventions](naming-conventions.md) guide.
 
 ## 📂 Demo Files
 
-Explore example files to practice variable concepts:
+Explore the examples to practice `variable` concepts:
 
 - [`var-let-const.js`](var-let-const.js)  
 - [`scope.js`](scope.js)  
@@ -157,9 +157,9 @@ Explore example files to practice variable concepts:
 
 ## 🧪 Try It Online
 
-Test the examples interactively:
+Try the examples interactively on:
 
-- [JSConsole](https://jsconsole.com) — Quick console testing  
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
 - [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
 
 ---

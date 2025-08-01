@@ -86,7 +86,7 @@ You'll see the output instantly in the console.
 
 ## 📁 Demo Files
 
-See the example file:
+Explore the examples:
 
 - [`index.html`](./index.html)
 - [`script.js`](./script.js)
@@ -97,11 +97,10 @@ See the example file:
 
 ## 🧪 Try It Online
 
-Want to experiment without setup? Use any of these online editors:
+Try the examples interactively on:
 
-- [JSFiddle](https://jsfiddle.net)
-- [JSConsole](https://jsconsole.com)
-- [CodePen](https://codepen.io)
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
+- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
 
 ---
 
