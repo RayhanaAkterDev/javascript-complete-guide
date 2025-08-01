@@ -1,45 +1,85 @@
 /*
-  Topic: primitives.js
+  Topic: objects.js
 
-  Demonstrates JavaScript's 7 primitive data types.
-  Primitives:
-    - Store actual values directly
-    - Are immutable (operations return new values)
-    - Compared by value
+  Demonstrates JavaScript reference data types, focusing on:
+    - Objects, Arrays, Functions, Dates, RegExp
+    - Reference behavior: assignment, mutation, and equality
+    - Shared references and cloning basics
 */
 
-// --- String: sequence of characters ---
-let name = "Sumaya";              // ✅ valid string
-console.log("String:", name);     // "Sumaya"
+// --- 1. Objects — key-value collections ---
 
-// --- Number: integer and floating-point values ---
-let age = 25;                     // ✅ integer
-let pi = 3.1416;                  // ✅ float
-console.log("Number (age):", age); // 25
-console.log("Number (pi):", pi);   // 3.1416
+const person = {
+    name: "Sumaya",
+    age: 23,
+};
+console.log("Object (person):", person);           // ✅ { name: "Sumaya", age: 23 }
 
-// --- Boolean: true or false values ---
-let isLoggedIn = true;            // ✅ boolean true
-let isAdmin = false;              // ✅ boolean false
-console.log("Boolean (isLoggedIn):", isLoggedIn); // true
-console.log("Boolean (isAdmin):", isAdmin);       // false
+// --- 2. Arrays — ordered lists ---
 
-// --- Null: intentional absence of value ---
-let empty = null;                 // ✅ explicitly set to null
-console.log("Null:", empty);      // null
+const numbers = [1, 2, 3];
+console.log("Array (numbers):", numbers);          // ✅ [1, 2, 3]
 
-// --- Undefined: declared but not assigned ---
-let unassigned;                   // ✅ declared without value
-console.log("Undefined:", unassigned); // undefined
+// --- 3. Functions — callable objects ---
 
-// --- Symbol: unique, immutable identifiers ---
-let id = Symbol("userID");        // ✅ unique symbol
-let anotherId = Symbol("userID"); // ✅ different despite same description
-console.log("Symbol (id):", id);
-console.log("Symbol equality:", id === anotherId); // false
+function greet() {
+    console.log("Hello!");
+}
+console.log("Function (typeof greet):", typeof greet); // ✅ function
+greet();                                               // ✅ Hello!
 
-// --- BigInt: integers beyond Number limits ---
-let big = 9007199254740993n;      // ✅ BigInt literal
-console.log("BigInt:", big);      // 9007199254740993n
+// --- 4. Date — date and time object ---
 
-// End of file. Reference types are shown in: reference.js
+const now = new Date();
+console.log("Date (now):", now);                       // ✅ current date-time object
+
+// --- 5. RegExp — regular expressions ---
+
+const pattern = /abc/gi;
+console.log("RegExp (pattern):", pattern);             // ✅ /abc/gi
+
+// --- 6. Reference behavior: Assignment & Mutation ---
+// Variables hold references to the same object in memory,
+// so changes via one reference affect all others.
+
+const obj1 = { value: 10 };
+const obj2 = obj1;                                     // ✅ obj2 references the same object
+
+obj2.value = 20;                                       // Mutation through obj2
+console.log("obj1.value (after mutation):", obj1.value); // ✅ 20
+console.log("obj2.value:", obj2.value);                  // ✅ 20
+
+console.log("------");
+
+// --- 7. Equality by reference ---
+// Two distinct objects with same content are NOT equal by ===
+// Only identical references are strictly equal.
+
+const o1 = { a: 1 };
+const o2 = { a: 1 };
+const o3 = o1;
+
+console.log("o1 === o2:", o1 === o2);                  // ❌ false
+console.log("o1 === o3:", o1 === o3);                  // ✅ true
+
+console.log("------");
+
+// --- 8. Shallow cloning objects ---
+// Copies only the top-level properties, nested objects are shared references.
+
+const original = { x: 1, y: { z: 2 } };
+const clone = Object.assign({}, original);
+
+clone.x = 10;                                          // Changes clone.x only
+clone.y.z = 20;                                        // Mutates original.y.z (nested reference)
+
+console.log("Original object:", original);             // ✅ { x: 1, y: { z: 20 } }
+console.log("Cloned object:", clone);                  // ✅ { x: 10, y: { z: 20 } }
+
+/*
+  🔗 Note:
+  Reference types store memory addresses pointing to objects.
+  Mutations affect all references to the same object.
+  Deep cloning requires special techniques or libraries.
+  See type-checking.js for detecting reference types.
+*/
