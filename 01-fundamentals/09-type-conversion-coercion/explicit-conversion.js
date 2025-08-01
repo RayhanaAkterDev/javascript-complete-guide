@@ -1,68 +1,57 @@
 /*
-    Topic: explicit-conversion.js
+  Topic: explicit-conversion.js
 
-    This file demonstrates explicit type conversion (type casting)
-    using built-in global functions and methods:
-        - String()
-        - Number()
-        - Boolean()
-        - parseInt()
-        - parseFloat()
-        - .toString()
+  Demonstrates explicit type conversion using:
+    - String(), .toString()
+    - Number()
+    - Boolean()
+    - parseInt(), parseFloat()
 
-    These conversions are manual and controlled by the developer.
+  These conversions are controlled by the developer.
+  For implicit behaviors, see: implicit-coercion.js
 */
 
-/* ---------------------------------
-    1. Number to String
---------------------------------- */
+// --- Number to String: converting numeric values to string ---
+
 const num = 42;
-console.log(String(num)); // "42"
-console.log(num.toString()); // "42"
 
-/* ---------------------------------
-    2. Boolean to String
---------------------------------- */
+console.log(String(num));        // ✅ "42" → using String()
+console.log(num.toString());     // ✅ "42" → using .toString()
+
+// --- Boolean to String: true/false to "true"/"false" ---
+
 const isLoggedIn = true;
-console.log(String(isLoggedIn)); // "true"
-console.log(isLoggedIn.toString()); // "true"
 
-/* ---------------------------------
-    3. String to Number
---------------------------------- */
-console.log(Number('123')); // 123
-console.log(Number('3.14')); // 3.14
-console.log(Number('abc')); // NaN
+console.log(String(isLoggedIn));      // ✅ "true"
+console.log(isLoggedIn.toString());   // ✅ "true"
 
-/* ---------------------------------
-    4. Boolean to Number
---------------------------------- */
-console.log(Number(true)); // 1
-console.log(Number(false)); // 0
+// --- String to Number: numeric strings to actual numbers ---
 
-/* ---------------------------------
-    5. String to Boolean
---------------------------------- */
-console.log(Boolean('')); // false
-console.log(Boolean('hello')); // true
+console.log(Number('123'));      // ✅ 123
+console.log(Number('3.14'));     // ✅ 3.14
+console.log(Number('abc'));      // ❌ NaN → invalid string
 
-/* ---------------------------------
-    6. Number to Boolean
---------------------------------- */
-console.log(Boolean(0)); // false
-console.log(Boolean(100)); // true
+// --- Boolean to Number: true → 1, false → 0 ---
 
-/* ---------------------------------
-    7. Using parseInt and parseFloat
---------------------------------- */
-console.log(parseInt('42px')); // 42
-console.log(parseFloat('3.14kg')); // 3.14
+console.log(Number(true));       // ✅ 1
+console.log(Number(false));      // ✅ 0
 
-console.log(parseInt('abc')); // NaN
-console.log(parseFloat('')); // NaN
+// --- String to Boolean: empty → false, non-empty → true ---
 
-/* ---------------------------------
-    🔗 Note:
-    Explicit conversion is clearer and avoids the unpredictable results
-    often caused by JavaScript’s automatic coercion.
-*/
+console.log(Boolean(''));        // ❌ false → empty string
+console.log(Boolean('hello'));   // ✅ true → non-empty string
+
+// --- Number to Boolean: 0 → false, others → true ---
+
+console.log(Boolean(0));         // ❌ false
+console.log(Boolean(100));       // ✅ true
+
+// --- Using parseInt and parseFloat: extract numbers from strings ---
+
+console.log(parseInt('42px'));       // ✅ 42 → parses integer
+console.log(parseFloat('3.14kg'));   // ✅ 3.14 → parses float
+
+console.log(parseInt('abc'));        // ❌ NaN → invalid input
+console.log(parseFloat(''));         // ❌ NaN → empty string
+
+// --- 🔗 Note: Use explicit conversion to avoid unpredictable coercion ---
