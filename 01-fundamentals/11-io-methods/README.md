@@ -139,8 +139,6 @@ Try the examples interactively on:
 
 ## 📚 Further Reading
 
-- [MDN Web APIs - Window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) — In-depth API details  
-- [MDN Console API](https://developer.mozilla.org/en-US/docs/Web/API/Console) — Console methods overview  
 - [JavaScript.info: Interaction](https://javascript.info/alert-prompt-confirm) — Beginner-friendly guide  
 
 ---
