@@ -19,8 +19,8 @@ console.log('Can vote:', canVote); // "Yes, can vote"
 let score = 75;
 
 let grade = (score >= 90) ? "A" :
-            (score >= 75) ? "B" :
-            (score >= 60) ? "C" : "F";
+    (score >= 75) ? "B" :
+        (score >= 60) ? "C" : "F";
 
 console.log('Grade:', grade); // "B"
 
