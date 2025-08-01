@@ -1,157 +1,165 @@
-# 07 - Data Types
+# 08 - Data Types
 
-**Tags:** `javascript`, `data-types`, `primitives`, `reference-types`, `type-checking`  
-**Purpose:** Understand the distinction between primitive and reference data types in JavaScript, their behavior, and how to reliably check their types.  
-**Overview:** This topic covers JavaScript’s primitive and reference data types, explains their characteristics such as immutability and reference behavior, and explores type checking with `typeof`, `instanceof`, and other reliable methods.
-
----
-
-_Table of Contents:_
-
-- [07 - Data Types](#07---data-types)
-  - [1. Primitive Data Types](#1-primitive-data-types)
-  - [2. Reference Data Types](#2-reference-data-types)
-  - [3. Type Checking](#3-type-checking)
-    - [3.1 Using `typeof`](#31-using-typeof)
-    - [3.2 Using `instanceof`](#32-using-instanceof)
-    - [3.3 Reliable type checks for arrays and null](#33-reliable-type-checks-for-arrays-and-null)
-  - [4. Common Pitfalls](#4-common-pitfalls)
-  - [5. Best Practices](#5-best-practices)
-  - [6. Code Example Files](#6-code-example-files)
-  - [7. Next Topic](#7-next-topic)
-  - [8. Further Reading](#8-further-reading)
-  - [9. Navigation](#9-navigation)
+Data types define the kind of data a variable can hold in JavaScript.  
+They are categorized into **primitive types** (which store actual values) and **reference types** (which store memory addresses).  
+Understanding data types helps you write clean, reliable, and bug-free code.
 
 ---
 
 ## 1. Primitive Data Types
 
-JavaScript has 7 primitive types. They hold **actual values** and are **immutable** (cannot be changed once created).
+Primitive values are stored **directly in the variable’s memory**, meaning they contain the actual value. They are **immutable**, so any operation creates a **new value** instead of changing the original.
 
-| Type       | Description                                  | Example                      |
-|------------|----------------------------------------------|------------------------------|
-| `String`   | Sequence of characters                        | `"hello"`                    |
-| `Number`   | Numeric values (both integers and floats)    | `42`, `3.14`                 |
-| `Boolean`  | Logical true or false                         | `true`, `false`              |
-| `Null`     | Intentional absence of any object value      | `null`                      |
-| `Undefined`| Variable declared but not assigned a value   | `undefined`                  |
-| `Symbol`   | Unique and immutable identifiers             | `Symbol('id')`               |
-| `BigInt`   | Arbitrary precision integers                  | `9007199254740991n`          |
+JavaScript has 7 primitive types.  
 
-- Primitives are stored directly in the variable's memory.
-- Operations on primitives return new values (immutable behavior).
-- Primitives are compared by **value**.
+- String — sequence of characters  
+- Number — numeric values (integers and floats)  
+- Boolean — true or false values  
+- Null — intentional absence of any value  
+- Undefined — declared but not assigned  
+- Symbol — unique identifiers  
+- BigInt — large integers beyond Number limits  
+
+**Example:**
+
+```js
+let name = "Sumaya";
+let age = 25;
+let isActive = true;
+let id = Symbol("id");
+let bigNumber = 9007199254740991n;
+```
 
 ---
 
 ## 2. Reference Data Types
 
-Reference types store **references (memory addresses)** to the actual objects in memory. Variables hold these references, not the objects themselves.
+Reference types store a **reference (memory address)** to the actual object or structure in memory.  
+They are **mutable**, meaning their content can be changed, and they are compared by **reference**, not by value.
 
-| Type       | Description                                  | Example                      |
-|------------|----------------------------------------------|------------------------------|
-| `Object`   | General key-value container                   | `{ name: "Sumaya", age: 23 }`|
-| `Array`    | Ordered list of values                         | `[1, 2, 3]`                  |
-| `Function` | Callable objects                              | `function greet() {}`        |
-| `Date`     | Represents date and time                       | `new Date()`                 |
-| `RegExp`   | Regular expressions                           | `/ab+c/`                     |
+- Object — key-value pairs  
+- Array — ordered list of values  
+- Function — callable code blocks  
+- Date — date and time objects  
+- RegExp — regular expressions  
 
-- Reference types are **mutable** — properties and elements can be changed.
-- Two variables can reference the same object, so changes via one variable affect the other.
-- Reference types are compared by **reference (memory location)**, not value.
+When you assign one object or array to another variable, they both point to the **same memory**, so changes made through one variable affect the other.
+
+**Example:**
+
+```js
+const user = { name: "Sumaya", age: 23 };
+const scores = [95, 88, 76];
+function greet() {
+  console.log("Hello");
+}
+```
 
 ---
 
 ## 3. Type Checking
 
+JavaScript provides multiple ways to check types — each has specific use cases.
+
 ### 3.1 Using `typeof`
 
-The `typeof` operator returns a string representing the type of the operand.
+The `typeof` operator returns a string representing the type of a value.  
+It works well for **primitives**, but has quirks with objects like `null` and arrays.
 
 ```js
-typeof "hello"      // "string"
-typeof 42           // "number"
-typeof true         // "boolean"
-typeof undefined    // "undefined"
-typeof Symbol()     // "symbol"
-typeof 10n          // "bigint"
-typeof null         // "object"  // Known JavaScript quirk
-typeof {}           // "object"
-typeof []           // "object"
-typeof function(){} // "function"
+typeof "hello";       // "string"
+typeof 42;            // "number"
+typeof true;          // "boolean"
+typeof undefined;     // "undefined"
+typeof Symbol();      // "symbol"
+typeof 10n;           // "bigint"
+typeof null;          // "object" // JavaScript quirk
+typeof {};            // "object"
+typeof [];            // "object"
+typeof function(){};  // "function"
 ```
-
-> Note: typeof null returning "object" is a historic bug in JavaScript.
 
 ### 3.2 Using `instanceof`
 
-`instanceof` checks whether an object is in the prototype chain of a constructor function.
+Checks whether a value is an **instance of a constructor**, useful for objects and custom types.
 
 ```js
-[] instanceof Array         // true
-new Date() instanceof Date  // true
-(function() {}) instanceof Function // true
-{} instanceof Object       // true
+[] instanceof Array;         // true
+new Date() instanceof Date;  // true
+(function() {}) instanceof Function; // true
+{} instanceof Object;        // true
 ```
 
-### 3.3 Reliable type checks for arrays and null
+### 3.3 Reliable Checks for Arrays and Null
 
-Because `typeof` returns `"object"` for arrays and null, use:
+Since `typeof []` and `typeof null` both return `"object"`, use these safer alternatives:
+
+```js
+Array.isArray([]); // true
+null === null;     // true
+```
 
 ---
 
 ## 4. Common Pitfalls
 
-1. `typeof null` returns `"object"`, which can confuse type checks.
-2. Arrays are objects, so `typeof []` is `"object"`; use `Array.isArray()` instead.
-3. Comparing objects with `==` or `===` compares references, not content.
-4. `NaN` (Not-a-Number) is a `number` type but is not equal to itself.
+Be aware of some unintuitive behavior when working with types:
+
+- `typeof null` returns `"object"` — use strict checks instead.  
+- Arrays are objects — `typeof []` is `"object"`; use `Array.isArray()` instead.  
+- Comparing two objects/arrays with `===` checks reference, not content.  
+- `NaN` is a `number` but not equal to itself (`NaN !== NaN`). Use `Number.isNaN()`.
 
 ```js
-NaN === NaN   // false
-Number.isNaN(NaN) // true
+Number.isNaN(NaN); // true
+NaN === NaN;       // false
 ```
 
 ---
 
-## 5. Best Practices
+## 💡 Best Practices
 
-- Use `typeof` for checking primitives.
-- Use `Array.isArray()` to check for arrays.
-- Use `instanceof` for custom objects and classes.
-- Use strict equality `===` to avoid implicit type coercion.
-- Handle `null` explicitly where necessary.
-- Use `Number.isNaN()` to detect `NaN` safely.
-
----
-
-## 6. Code Example Files
-
-See files in the _`08-data-types`_ folder for working demos:
-
-- [`primitives.js`](primitives.js) — Examples of primitive types and immutability.
-- [`objects.js`](objects.js) — Demonstrations of reference types and mutation.
-- [`type-checking.js`](type-checking.js) — Various type checking methods and pitfalls.
+✅ Use `typeof` to check primitives.  
+✅ Use `Array.isArray()` for arrays.  
+✅ Use `instanceof` for objects and classes.  
+✅ Use strict equality `===` to avoid unexpected type coercion.  
+✅ Check for `null` explicitly.  
+✅ Use `Number.isNaN()` for safe NaN checks.
 
 ---
 
-## 7. Next Topic
+## 📂 Demo Files
 
-**[→ 09 - Type Conversion & Coercion](../09-type-conversion-coercion/README.md)** — Learn how JavaScript converts values between types implicitly and explicitly.
+Explore the examples to practice `data-types` concepts:
 
----
-
-## 8. Further Reading
-
-For more detailed explanations and official documentation, consider exploring:
-
-- [MDN JavaScript Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)  
-- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)  
-- [JavaScript.info: Data Types](https://javascript.info/types)  
-- [You Don't Know JS: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/types%20%26%20grammar)
+- [`primitives.js`](primitives.js)  
+- [`reference.js`](reference.js)  
+- [`type-checking.js`](type-checking.js)  
 
 ---
 
-## 9. Navigation
+## 🧪 Try It Online
+
+Try the examples interactively on:
+
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
+- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+
+---
+
+## 📚 Further Reading
+
+- [MDN JavaScript Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values) — In-depth explanation  
+- [JavaScript.info: Data Types](https://javascript.info/types) — Beginner-friendly guide
+
+---
+
+## 🔗 Next Topic
+
+**[→ 09 - Type Conversion & Coercion](../09-type-conversion-coercion/README.md)** — Understand how JavaScript converts and coerces data types automatically or explicitly.
+
+---
+
+## 🧭 Navigation
 
 [← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
