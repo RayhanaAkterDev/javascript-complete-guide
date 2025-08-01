@@ -67,9 +67,8 @@ Or just browse topics and copy-paste .js code into your browser console. No setu
 
 ### ✅ Option 2: Use an Online Playground
 
-- [https://jsfiddle.net](https://jsfiddle.net)  
-- [https://jsconsole.com](https://jsconsole.com)  
-- [https://codepen.io](https://codepen.io)  
+- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
+- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS  
 
 Just paste the code and run. Super quick!
 
