@@ -7,10 +7,14 @@
     - Reassignment
     - Basic block scope visibility
 
-  For detailed scope rules, see: scope.js
+  ⚠️ Note:
+  This file does not cover full hoisting or scoping rules.
+  For complete examples, see:
+    → scope/index.js
+    → hoisting/index.js
 */
 
-// --- var: function-scoped, redeclarable, hoisted with undefined ---
+// --- 1. var: function-scoped, redeclarable, hoisted with undefined ---
 
 var a = 10;           // initial assignment
 var a = 20;           // ✅ Redeclaration allowed
@@ -18,7 +22,7 @@ a = 30;               // ✅ Reassignment allowed
 
 console.log("var a:", a); // 30
 
-// --- let: block-scoped, no redeclaration, reassignment allowed ---
+// --- 2. let: block-scoped, no redeclaration, reassignment allowed ---
 
 let b = 40;           // initial assignment
 
@@ -29,7 +33,7 @@ b = 60;               // ✅ Reassignment allowed
 
 console.log("let b:", b); // 60
 
-// --- const: block-scoped, no redeclaration or reassignment ---
+// --- 3. const: block-scoped, no redeclaration or reassignment ---
 
 const c = 70;         // initial assignment
 
@@ -41,7 +45,7 @@ const c = 70;         // initial assignment
 
 console.log("const c:", c); // 70
 
-// --- Scope behavior in blocks: var leaks outside block, let and const do not ---
+// --- 4. Block behavior: var leaks, let and const are scoped properly ---
 
 if (true) {
     var d = 100;        // function-scoped

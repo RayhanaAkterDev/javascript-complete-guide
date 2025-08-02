@@ -149,9 +149,16 @@ For details, see the [Naming Conventions](naming-conventions.md) guide.
 
 Explore the examples to practice `variable` concepts:
 
-- [`var-let-const.js`](var-let-const.js)  
-- [`scope.js`](scope.js)  
-- [`hoisting-tdz.js`](hoisting-tdz.js)  
+- [`index.js`](index.js)
+
+---
+
+## 🔎 Related Concepts
+
+Some concepts introduced in this topic are covered in more depth:
+
+- [16 - Scope](../16-scope/README.md) → Understand block vs function scope and visibility  
+- [17 - Hoisting](../17-hoisting/README.md) → Learn how declarations move before execution and how TDZ works  
 
 ---
 
