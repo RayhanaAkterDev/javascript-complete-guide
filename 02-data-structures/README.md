@@ -7,17 +7,14 @@ Master arrays, objects, sets, maps, and JSON — essential tools for handling co
 
 ## 📚 Topics Covered
 
-| #   | Topic Name                                         | Description                                                         |
-|-----|--------------------------------------------------|---------------------------------------------------------------------|
-| 01  | [Arrays Basics](./01-arrays-basics/README.md)    | Creating, accessing, and iterating arrays                           |
-| 02  | [Array Methods](./02-array-methods/README.md)    | Common methods like `push`, `pop`, `shift`, `unshift`              |
-| 03  | [Advanced Array Methods](./03-advanced-array-methods/README.md) | Higher-order methods like `map`, `filter`, `reduce`, `find`, `forEach` |
-| 04  | [Objects Basics](./04-objects-basics/README.md)  | Object creation, property access, dynamic keys                      |
-| 05  | [Object Methods](./05-object-methods/README.md)  | `Object.keys`, `Object.values`, `Object.entries`                    |
-| 06  | [Nested Objects & Arrays](./06-nested-structures/README.md) | Working with complex nested data structures                         |
-| 07  | [Sets](./07-sets/README.md)                       | Creating sets, adding/removing elements, use cases                  |
-| 08  | [Maps](./08-maps/README.md)                       | Key-value pairs, differences from objects, iteration                |
-| 09  | [JSON](./09-json/README.md)                       | Parsing, stringifying, and working with real-world data formats     |
+| #   | Topic Name                                   | Description                                                                 |
+|------|----------------------------------------------|-----------------------------------------------------------------------------|
+| 01   | [Arrays](./01-arrays/README.md)              | Basics, common methods, and advanced techniques like `map`, `filter`, `reduce` |
+| 02   | [Objects](./02-objects/README.md)            | Object creation, property access, and utility methods like `Object.keys`, `Object.entries` |
+| 03   | [Nested Structures](./03-nested-structures/README.md) | Handling deeply nested objects and arrays, real-world access strategies      |
+| 04   | [Sets](./04-sets/README.md)                  | Unique-value collections, set operations, iteration patterns                |
+| 05   | [Maps](./05-maps/README.md)                  | Key-value collections, key types, comparisons with objects                  |
+| 06   | [JSON](./06-json/README.md)                  | Parsing, stringifying, and working with real-world API data formats         |
 
 ---
 
