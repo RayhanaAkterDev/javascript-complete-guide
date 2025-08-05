@@ -1,4 +1,4 @@
-# 🧠 JavaScript Core Concepts
+# 🧠 JavaScript Complete Guide
 
 A complete, **hands-on** JavaScript learning guide from **basics to advanced**.  
 Learn core concepts with **clear examples**, minimal setup, and real-world relevance.
