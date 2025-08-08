@@ -1,103 +1,156 @@
 # 02 - JavaScript Runtime
 
-JavaScript doesn’t run magically — it operates inside powerful **engines** that convert code into actions.  
-This topic explains how JavaScript is executed in the browser or Node.js: from call stacks and memory to how async code is handled with the event loop.
+JavaScript doesn’t run magically — it operates inside powerful **engines** that turn code into actions.  
+
+This topic gives you a practical understanding of how JavaScript executes inside browsers or Node.js: from call stacks and memory management to handling asynchronous tasks with the event loop.
 
 ---
 
-## 1. JavaScript Engines
+## What is the JavaScript Runtime?
 
-Modern browsers and platforms run JavaScript using **JS engines**:
+A **runtime** is the environment where JavaScript code is executed.
+
+It includes:
+
+- The **JavaScript engine** (e.g., V8 in Chrome/Node.js)
+- APIs provided by the host (e.g., DOM in browsers, `fs` in Node.js)
+- Systems like the **call stack**, **heap memory**, and **event loop**
+
+Together, these elements allow JS to function — even though it's single-threaded — without blocking user interactions.
+
+---
+
+## Key Components of the Runtime
+
+### 1. JavaScript Engines
+
+JavaScript runs through optimized engines built into platforms:
 
 | Engine         | Used In         |
 |----------------|-----------------|
-| V8             | Chrome, Node.js |
-| SpiderMonkey   | Firefox         |
-| JavaScriptCore | Safari          |
+| **V8**         | Chrome, Node.js |
+| **SpiderMonkey** | Firefox       |
+| **JavaScriptCore** | Safari      |
 
-These engines parse your code, optimize it, and execute it efficiently.
-
----
-
-## 2. Execution Context
-
-Every time a script or function runs, an **execution context** is created.
-
-It contains:
-
-- The current **scope** (variables, functions)
-- The **value of `this`**
-- References to outer environments (lexical environment)
+These engines parse your code, optimize it, and convert it to machine instructions for execution.
 
 ---
 
-## 3. Call Stack
+### 2. Execution Context
 
-The **call stack** keeps track of function execution.
+Each time code runs, an **execution context** is created.
 
-- It works in **LIFO** (Last In, First Out) order.
-- Each function call is "pushed" onto the stack.
-- When a function completes, it is "popped" off.
+It includes:
 
-If the stack grows too large (e.g., infinite recursion), you get a **stack overflow**.
+- The **scope** and variable environment
+- The current value of **`this`**
+- References to the **lexical environment**
 
----
+Example:
 
-## 4. Memory Heap
+```js
+function sayHello(name) {
+  console.log("Hello " + name);
+}
+sayHello("Sumaya"); // Creates a new execution context
+```
 
-The **heap** is where objects and reference data are stored.
-
-- Memory is allocated dynamically.
-- JavaScript uses **automatic garbage collection** to clean up unused memory.
-
----
-
-## 5. Event Loop & Task Queue
-
-JavaScript is **single-threaded** but handles async behavior via:
-
-- The **Event Loop**: Watches the stack and the task queue.
-- The **Task Queue (Callback Queue)**: Stores async callbacks (e.g., from `setTimeout`, events).
-
-Once the stack is empty, the loop moves queued tasks onto the stack one at a time.
+Multiple execution contexts are managed during code execution, especially when functions are called.
 
 ---
 
-## 6. Single-Threaded, Non-Blocking
+### 3. Call Stack
 
-JavaScript handles concurrency with **non-blocking async APIs**, not multiple threads.
+The **call stack** tracks function execution in a **LIFO (Last In, First Out)** manner:
 
-This makes it efficient for tasks like:
+- Functions are "pushed" when invoked
+- Once done, they are "popped" off the stack
 
-- UI rendering
-- Network requests
-- Real-time events
+Example:
 
----
+```js
+function greet() {
+  console.log("Hello");
+}
+greet();
+```
 
-## 7. Browser vs Node.js Runtime
-
-| Feature        | Browser                    | Node.js                         |
-|----------------|----------------------------|----------------------------------|
-| APIs           | DOM, `alert`, `fetch`      | `fs`, `http`, OS, modules       |
-| Engine         | Usually V8                 | V8                              |
-| Use Case       | UI and frontend             | Server-side scripting           |
+If the stack overflows (e.g., from infinite recursion), it results in a **stack overflow error**.
 
 ---
 
-## 📚 Further Reading
+### 4. Memory Heap
 
-- [MDN - JavaScript Engine Concepts](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [JavaScript.info - Execution Context](https://javascript.info/execution-context)
+The heap stores all dynamically allocated memory — such as objects and arrays.
+
+- JavaScript allocates memory as needed
+- Garbage collection automatically removes unused data
+- **Note**: Primitive values (numbers, strings, booleans) are usually stored on the stack, while objects live in the heap
+
+You don’t manage memory manually, but understanding heap behavior helps with performance tuning.
 
 ---
 
-## 🔗 Next Topic
+### 5. Event Loop & Task Queue
 
-**[→ 03 - Embedding JavaScript](../03-embedding-js/README.md)** — Learn how to add JavaScript to HTML via inline, internal, and external scripts.
+JavaScript handles async behavior through:
+
+- **The Call Stack**: Runs synchronous code.  
+- **The Task Queue**: Holds callback functions (from `setTimeout`, DOM events, etc.).  
+- **The Event Loop**: Bridges the two — constantly checks if the stack is empty and then pushes tasks from the queue.  
+
+This is how JS stays **non-blocking** while being **single-threaded**.
 
 ---
 
-## 🧭 Navigation
+### 6. Single-Threaded, Non-Blocking Model
 
-[← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
+JavaScript uses a **single thread** for execution, but doesn't block thanks to **async APIs**.  
+This makes it ideal for:
+
+- Real-time interactions.  
+- Smooth UI updates.  
+- Fast server responses (e.g., with Node.js).
+
+---
+
+### 7. Browser vs Node.js Runtime
+
+| Feature | Browser              | Node.js                  |
+|---------|----------------------|--------------------------|
+| APIs    | DOM, `alert`, `fetch`| `fs`, `http`, OS, modules |
+| Engine  | Usually V8           | V8                       |
+| Use Case| Frontend, UI logic   | Server-side scripting    |
+
+Both share the core JS engine, but expose different sets of tools and APIs.
+
+---
+
+## 💡 **Pro Tip: Mastering the Runtime = Debugging Power**
+
+If you understand how JS runs — stacks, heaps, event loops —  
+you’ll debug smarter, write better async code, and avoid performance bottlenecks.
+
+---
+
+## 🔗 Navigation
+
+### 🔜 Next Topic
+
+- → [03 - Embedding JavaScript](../03-embedding-js/README.md)  
+*Learn how to add JavaScript to HTML using inline, internal, and external methods.*
+
+### 🔙 Previous Topic
+
+- [← 01 - JS Introduction](../01-js-intro/README.md)  
+  *Learn the basics of JavaScript, its history, and how it works.*
+
+---
+
+### 📂 Explore More
+
+- [← Back to Fundamentals Overview](../README.md)  
+  *Browse other core foundational topics.*
+
+- [🏠 Main JavaScript Guide](../../README.md)  
+  *Return to full roadmap and module list.*
