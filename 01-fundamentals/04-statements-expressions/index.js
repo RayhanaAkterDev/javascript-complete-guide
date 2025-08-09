@@ -2,8 +2,8 @@
   Topic: 04 - Statements & Expressions
 
   Demonstrates the difference between statements and expressions:
-    - Statements perform actions
-    - Expressions produce values
+    - Statements perform actions.
+    - Expressions produce values.
   Understanding this distinction helps write clear, bug-free code.
 */
 
@@ -13,12 +13,12 @@
 const number = 5;
 
 // --- 2. Assignment with Expression ---
-// 'number * 2' is an expression assigned to doubled.
+// 'number * 2' is an expression assigned to the variable 'doubled'.
 
 const doubled = number * 2;
 
 // --- 3. Conditional Statement Using Expression as Condition ---
-// if statement uses expression 'doubled > 5' as condition.
+// The if statement uses the expression 'doubled > 5' as its condition.
 
 if (doubled > 5) {
     console.log('Doubled value is greater than 5'); // Statement: function call
@@ -32,11 +32,11 @@ function greet(name) {
 }
 
 // --- 5. Function Call Expression Inside Statement ---
-// console.log call is a statement; greet('Sumaya') is an expression argument.
+// 'console.log' call is a statement; 'greet("Sumaya")' is an expression passed as argument.
 
 console.log(greet('Sumaya'));
 
-// --- 6. Expression by Itself ---
-// An expression alone; valid but has no effect here.
+// --- 6. Expression Statement by Itself ---
+// An expression alone; valid syntax but produces a value that is not used here.
 
-3 + 4;
+3 + 4;  // Expression statement — produces 7 but result is ignored.
