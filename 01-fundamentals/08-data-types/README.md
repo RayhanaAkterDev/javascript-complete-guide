@@ -1,8 +1,18 @@
 # 08 - Data Types
 
 Data types define the kind of data a variable can hold in JavaScript.  
-They are categorized into **primitive types** (which store actual values) and **reference types** (which store memory addresses).  
+JavaScript is **dynamically typed**, meaning variables can hold any type and can change types at runtime.  
+Data types are categorized into **primitive types** (which store actual values) and **reference types** (which store memory addresses).  
+
 Understanding data types helps you write clean, reliable, and bug-free code.
+
+---
+
+## ⚡ Quick Summary (TL;DR)
+
+- **Primitive types** store actual values and are immutable  
+- **Reference types** store memory addresses and are mutable  
+- Use `typeof`, `instanceof`, and `Array.isArray()` to check types accurately
 
 ---
 
@@ -10,15 +20,15 @@ Understanding data types helps you write clean, reliable, and bug-free code.
 
 Primitive values are stored **directly in the variable’s memory**, meaning they contain the actual value. They are **immutable**, so any operation creates a **new value** instead of changing the original.
 
-JavaScript has 7 primitive types.  
+**JavaScript has 7 primitive types:**  
 
-- String — sequence of characters  
-- Number — numeric values (integers and floats)  
-- Boolean — true or false values  
-- Null — intentional absence of any value  
-- Undefined — declared but not assigned  
-- Symbol — unique identifiers  
-- BigInt — large integers beyond Number limits  
+- **String** — sequence of characters  
+- **Number** — numeric values (integers and floats)  
+- **Boolean** — true or false values  
+- **Null** — intentional absence of any value (typeof returns `"object"` due to a historic bug)  
+- **Undefined** — declared but not assigned  
+- **Symbol** — unique identifiers  
+- **BigInt** — large integers beyond Number limits  
 
 **Example:**
 
@@ -28,6 +38,7 @@ let age = 25;
 let isActive = true;
 let id = Symbol("id");
 let bigNumber = 9007199254740991n;
+console.log(bigNumber + 10n); // 9007199254741001n
 ```
 
 ---
@@ -37,11 +48,11 @@ let bigNumber = 9007199254740991n;
 Reference types store a **reference (memory address)** to the actual object or structure in memory.  
 They are **mutable**, meaning their content can be changed, and they are compared by **reference**, not by value.
 
-- Object — key-value pairs  
-- Array — ordered list of values  
-- Function — callable code blocks  
-- Date — date and time objects  
-- RegExp — regular expressions  
+- **Object** — key-value pairs  
+- **Array** — ordered list of values  
+- **Function** — callable code blocks (functions are special callable objects)  
+- **Date** — date and time objects  
+- **RegExp** — regular expressions  
 
 When you assign one object or array to another variable, they both point to the **same memory**, so changes made through one variable affect the other.
 
@@ -53,6 +64,11 @@ const scores = [95, 88, 76];
 function greet() {
   console.log("Hello");
 }
+
+const arr = [1, 2, 3];
+const arrCopy = arr;
+arrCopy.push(4);
+console.log(arr); // [1, 2, 3, 4] — both variables point to the same array
 ```
 
 ---
@@ -73,7 +89,7 @@ typeof true;          // "boolean"
 typeof undefined;     // "undefined"
 typeof Symbol();      // "symbol"
 typeof 10n;           // "bigint"
-typeof null;          // "object" // JavaScript quirk
+typeof null;          // "object" // historic bug
 typeof {};            // "object"
 typeof [];            // "object"
 typeof function(){};  // "function"
@@ -119,47 +135,43 @@ NaN === NaN;       // false
 
 ## 💡 Best Practices
 
-✅ Use `typeof` to check primitives.  
-✅ Use `Array.isArray()` for arrays.  
-✅ Use `instanceof` for objects and classes.  
-✅ Use strict equality `===` to avoid unexpected type coercion.  
-✅ Check for `null` explicitly.  
-✅ Use `Number.isNaN()` for safe NaN checks.
+- ✅ Use `typeof` to check primitives  
+- ✅ Use `Array.isArray()` for arrays  
+- ✅ Use `instanceof` for objects and classes  
+- ✅ Use strict equality `===` to avoid unexpected type coercion  
+- ✅ Check for `null` explicitly  
+- ✅ Use `Number.isNaN()` for safe NaN checks
 
 ---
 
-## 📂 Demo Files
+## 📂 Practice with Demo Files
 
-Explore the examples to practice `data-types` concepts:
+Try these examples to practice:
 
-- [`primitives.js`](primitives.js)  
-- [`reference.js`](reference.js)  
-- [`type-checking.js`](type-checking.js)  
-
----
-
-## 🧪 Try It Online
-
-Try the examples interactively on:
-
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+- [`01-primitives.js`](01-primitives.js)  
+- [`02-reference.js`](02-reference.js)  
+- [`03-type-checking.js`](03-type-checking.js)  
 
 ---
 
-## 📚 Further Reading
+## 🔗 Navigation
 
-- [MDN JavaScript Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values) — In-depth explanation  
-- [JavaScript.info: Data Types](https://javascript.info/types) — Beginner-friendly guide
+### 🔜 Next Topic
+
+- [→ 09 - Type Conversion & Coercion](../09-type-conversion-coercion/README.md)  
+  *Understand how JavaScript converts and coerces data types automatically or explicitly.*
+
+### 🔙 Previous Topic
+
+- [← 07 - Variables](../07-variables/README.md)  
+  *Learn how to store and manage data with variables.*
 
 ---
 
-## 🔗 Next Topic
+### 📂 Explore More
 
-**[→ 09 - Type Conversion & Coercion](../09-type-conversion-coercion/README.md)** — Understand how JavaScript converts and coerces data types automatically or explicitly.
+- [← Back to Fundamentals Overview](../README.md)  
+  *Browse foundational JavaScript topics.*
 
----
-
-## 🧭 Navigation
-
-[← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+  *Return to the full roadmap and module list.*

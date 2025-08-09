@@ -15,7 +15,7 @@ console.log(typeof "text");           // ✅ string
 console.log(typeof 123);              // ✅ number
 console.log(typeof true);             // ✅ boolean
 console.log(typeof undefined);        // ✅ undefined
-console.log(typeof null);             // ❌ object (known JavaScript quirk)
+console.log(typeof null);             // ❌ object (JavaScript quirk)
 console.log(typeof Symbol());         // ✅ symbol
 console.log(typeof 10n);              // ✅ bigint
 console.log(typeof function () {});   // ✅ function
@@ -48,22 +48,22 @@ console.log(Number.isNaN(NaN));   // ✅ true
 // --- 6. Example: robust type check function ---
 
 function getType(value) {
-    if (value === null) return "null";         // ✅ explicit null check
-    if (Array.isArray(value)) return "array";  // ✅ array check
-    return typeof value;                       // ✅ default typeof
+    if (value === null) return "null";         // explicit null check
+    if (Array.isArray(value)) return "array";  // reliable array check
+    return typeof value;                        // fallback to typeof
 }
 
-console.log(getType(null));        // null
-console.log(getType([]));          // array
-console.log(getType({}));          // object
-console.log(getType(123));         // number
-console.log(getType("text"));      // string
+console.log(getType(null));        // "null"
+console.log(getType([]));          // "array"
+console.log(getType({}));          // "object"
+console.log(getType(123));         // "number"
+console.log(getType("text"));      // "string"
 
 /*
-  🔗 Note:
+  🔗 Notes:
   - Use typeof for primitives and functions.
-  - Use instanceof for object/class checks.
-  - Use Array.isArray() to detect arrays reliably.
-  - Check null explicitly.
-  - Use Number.isNaN() to safely detect NaN.
+  - Use instanceof to check if an object is an instance of a class or constructor.
+  - Use Array.isArray() for reliable array detection.
+  - Check null explicitly because typeof null returns "object".
+  - Use Number.isNaN() to detect NaN safely, as NaN !== NaN.
 */
