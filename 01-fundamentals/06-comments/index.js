@@ -34,8 +34,8 @@ let isStudent = true;
   Multi-line comments can also explain logic inside functions or blocks.
 */
 function greetUser(name) {
-  // Use template literals for clear string formatting
-  return `Hello, ${name}! 👋`;
+    // Use template literals for clear string formatting
+    return `Hello, ${name}! 👋`;
 }
 
 console.log(greetUser(userName)); // Output: Hello, Sumaya!

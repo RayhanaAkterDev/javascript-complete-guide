@@ -1,155 +1,138 @@
 # 07 - Variables
 
-Variables are **named storage containers** used to hold data values in the program.  
+Variables are **named storage containers** used to hold data values in a program.  
 They allow you to store, update, and retrieve information dynamically during code execution.
+
+---
+
+## ⚡ Quick Summary (TL;DR)
+
+- **Variables** store values for later use in the program  
+- Can be updated and reused as needed  
+- Declared using `let`, `const`, or `var` (prefer `let` & `const` in modern JS)  
+- Scope and hoisting affect where and when variables can be accessed  
 
 ---
 
 ## 1. What Are Variables?
 
-Variables are named containers that store information used throughout a program.
+A **variable** is like a labeled box where you keep data so your program can use it later.
 
-- Store values for later use  
-- Update data dynamically  
-- Reuse and interact with stored data
+- Store numbers, strings, objects, arrays, functions, etc.  
+- Name should be descriptive for clarity  
+- Values can change (except when using `const` for constants)
+
+**Why Use Variables?**
+
+Variables let you store and change data dynamically, making your programs flexible and interactive.
 
 **Example:**
 
 ```js
-let name = "Sumaya";
-let score = 95;
+let name = "Sumaya";  // String
+let score = 95;       // Number
+let passed = true;    // Boolean
 ```
 
 ---
 
-## 2. Declaring Variables in JavaScript
+## 2. Declaring Variables
 
-JavaScript provides three keywords for variable declaration:
+JavaScript provides three keywords to declare variables:
 
-- `var`
-- `let`
-- `const`
+| Keyword  | Scope         | Reassignable | Must Initialize? | Notes                    |
+|----------|---------------|--------------|------------------|--------------------------|
+| `let`    | Block-scoped  | Yes          | No               | Modern, recommended      |
+| `const`  | Block-scoped  | No           | Yes              | Immutable after init     |
+| `var`    | Function-scoped | Yes        | No               | Legacy, avoid in new code|
 
-### 2.1 `var`
-
-- Function-scoped  
-- Redeclarable and reassignable  
-- Hoisted and initialized with `undefined`  
-- Generally discouraged in modern JS
+**Example:**
 
 ```js
-var age = 25;
-var age = 30; // ✅ Redeclaration allowed
-```
-
-### 2.2 `let`
-
-- Block-scoped  
-- Cannot be redeclared in the same scope  
-- Reassignable  
-- Hoisted but not initialized (TDZ applies)
-
-```js
-let score = 100;
-score = 110; // ✅ Reassignment allowed
-```
-
-### 2.3 `const`
-
-- Block-scoped  
-- Cannot be redeclared or reassigned  
-- Must be initialized during declaration  
-- Ideal for values that should never change
-
-```js
-const PI = 3.1416;
-// PI = 3.14; // ❌ Error: Assignment to constant variable
+let age = 21;       // Mutable
+const PI = 3.1416;  // Immutable
+var city = "Dhaka"; // Function-scoped (not recommended)
 ```
 
 ---
 
-## 3. Scope of Variables
+## 3. Naming Rules
 
-Scope defines where a variable is accessible:
+- Must start with a letter, `_`, or `$`  
+- Cannot start with a number  
+- Cannot use reserved JavaScript keywords  
+- Case-sensitive (`name` and `Name` are different)
 
-- `var` → Function-scoped
-- `let` and `const` → Block-scoped
-- Global variables → Accessible everywhere
+✅ Good: `userName`, `_total`, `$price`  
+🚫 Bad: `2ndPlace`, `let`
+
+> For details, see the [Naming Conventions](naming-conventions.md) guide.
+
+---
+
+## 4. Variable Scope
+
+| Scope Type       | Declared With  | Accessible Where?                      |
+|------------------|----------------|---------------------------------------|
+| Block Scope      | `let`, `const` | Inside the block `{ ... }` only        |
+| Function Scope   | `var`          | Inside the function where declared     |
+| Global Scope     | Any keyword (outside all functions) | Anywhere in the program |
+
+---
+
+## 5. Reassigning Variables
 
 ```js
-function example() {
-  var a = 10;  // function-scoped
-  let b = 20;  // block-scoped
-}
+let count = 5;
+count = 10; // ✅ Works
+
+const pi = 3.14;
+pi = 3.1416; // ❌ Error: Assignment to constant variable
 ```
 
 ---
 
-## 4. Hoisting and Temporal Dead Zone (TDZ)
+## 6. Hoisting & Temporal Dead Zone (TDZ)
 
-Variable declarations are hoisted to the top of their scope. Accessing them before declaration causes a ReferenceError (TDZ).
+- **`var`** declarations are hoisted (moved to the top) and initialized as `undefined`  
+- **`let`** & **`const`** are hoisted but not initialized, causing a Temporal Dead Zone before declaration
 
-- `var`: Hoisted + initialized with `undefined`  
-- `let` & `const`: Hoisted but **not initialized**  
+**Example:**
 
 ```js
 console.log(a); // undefined
-var a = 5;
+var a = 10;
 
-console.log(b); // ReferenceError
-let b = 10;
+console.log(b); // ❌ ReferenceError: Cannot access 'b' before initialization
+let b = 20;
 ```
 
----
-
-## 5. Variable Naming Rules and Best Practices
-
-✅ Must begin with a letter, `_`, or `$`  
-✅ Case-sensitive  
-✅ Use `camelCase` for variables  
-✅ Use `UPPER_SNAKE_CASE` for constants  
-❌ Avoid reserved words and special characters  
-✅ Use meaningful, descriptive names
+**Gotcha:**
 
 ```js
-/* ❌ Avoid */
-var temp = 123;
-let data = "stuff";
+console.log(foo); // undefined (var is hoisted)
+var foo = "Hello";
 
-/* ✅ Prefer */
-let userName = "Sumaya";
-const MAX_RETRIES = 5;
+console.log(bar); // ❌ ReferenceError (let not initialized yet)
+let bar = "World";
 ```
 
-For details, see the [Naming Conventions](naming-conventions.md) guide.
+---
+
+## 💡 Pro Tips
+
+- ✅ Use `const` by default, switch to `let` only when reassignment is needed  
+- ✅ Use meaningful, descriptive variable names  
+- 🚫 Avoid `var` in modern JavaScript to prevent scope-related bugs  
+- ✅ Keep variable scope as small as possible to avoid conflicts
 
 ---
 
-## 6. Why Use Variables?
+## 📂 Practice with Demo Files
 
-- Store user input, calculations, and data dynamically  
-- Make code flexible and reusable  
-- Keep your program organized and maintainable  
-- Enable interaction and manipulation of data at runtime
+Try these examples to practice:
 
----
-
-## 💡 Best Practices
-
-✅ Use `const` by default for values that don’t change  
-✅ Use `let` only when reassignment is needed  
-✅ Avoid `var` unless required for legacy code  
-✅ Always initialize variables  
-✅ Minimize variable scope  
-✅ Choose names that reflect the purpose
-
----
-
-## 📂 Demo Files
-
-Explore the examples to practice `variable` concepts:
-
-- [`index.js`](index.js)
+- [`index.js`](./index.js)
 
 ---
 
@@ -162,29 +145,24 @@ Some concepts introduced in this topic are covered in more depth:
 
 ---
 
-## 🧪 Try It Online
+## 🔗 Navigation
 
-Try the examples interactively on:
+### 🔜 Next Topic
 
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+- [→ 08 - Data Types](../08-data-types/README.md)  
+  *Understand different kinds of data you can store in variables.*
 
----
+### 🔙 Previous Topic
 
-## 📚 Further Reading
-
-- [MDN - var, let, const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var) — In-depth explanation  
-- [JavaScript.info - Variables](https://javascript.info/variables) — Beginner-friendly guide  
-- [freeCodeCamp - JavaScript Variables](https://www.freecodecamp.org/news/javascript-variables-explained/) — Practical use cases
+- [← 06 - Comments](../06-comments/README.md)  
+  *Learn how to add helpful notes to your code.*
 
 ---
 
-## 🔗 Next Topic
+### 📂 Explore More
 
-**[→ 08 - Data Types](../08-data-types/README.md)** — Learn about the different types of data you can store in JavaScript variables.
+- [← Back to Fundamentals Overview](../README.md)  
+  *Browse foundational JavaScript topics.*
 
----
-
-## 🧭 Navigation
-
-[← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+  *Return to the full roadmap and module list.*

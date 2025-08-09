@@ -7,23 +7,25 @@ Naming conventions help write clean, readable, and maintainable code by followin
 ## 1. Rules for Writing Variable Names
 
 - Variable names are **case-sensitive** (`myVar` and `myvar` are different).  
-- Names **cannot contain spaces**.  
+- Names **cannot contain spaces or hyphens**.  
 - Allowed characters: letters, digits, underscores `_`, and dollar signs `$`.  
 - Names must **begin** with a letter, underscore `_`, or dollar sign `$`.  
 - Avoid using **reserved keywords** like `if`, `const`, `return`.  
 - Use **descriptive names** that convey meaning (e.g., `sellingPrice` instead of `x`).  
-- Since JavaScript is dynamically typed, indicating variable type in the name can help (e.g., `orderNumber` for numeric ID).
+- Because JavaScript is dynamically typed, including type hints in variable names (like `orderNumber`) can improve readability.
 
 ---
 
 ## 2. Common Naming Conventions
+
+Following naming conventions improves code readability and helps developers understand the role of variables at a glance.
 
 ### 2.1 Variables and Functions
 
 Use `camelCase` (lowercase first word, capitalize subsequent words).
 
 ```js
-var dogName = "Droopy";
+let dogName = "Droopy";
 
 function getName(dogName, ownerName) {
   return `${dogName} ${ownerName}`;
@@ -35,8 +37,8 @@ function getName(dogName, ownerName) {
 Prefix with `is` or `has` for clarity.
 
 ```js
-var isBarking = false;
-var hasOwner = true;
+let isBarking = false;
+let hasOwner = true;
 ```
 
 ### 2.3 Constants
@@ -76,13 +78,13 @@ function DogCartoonComponent(props) {
 
 ## 3. Invalid Variable Names
 
-### 3.1 Name Starts with Digit
+### 3.1 Names Cannot Start with a Digit
 
 Names cannot start with a digit or contain hyphens:
 
 ```js
-let 1a;        // Invalid: starts with a digit
-let my-name;   // Invalid: contains hyphen
+let 1a;        // ❌ Invalid: starts with a digit
+let my-name;   // ❌ Invalid: contains hyphen
 ```
 
 ### 3.2 Using Implicit Globals
@@ -113,4 +115,4 @@ See the full list of reserved words on [MDN Web Docs](https://developer.mozilla.
 
 ## 4. Navigation
 
-🔙 [Back to Variables](README.md)
+🔙 [Back to Variables](./README.md)

@@ -1,17 +1,16 @@
 /*
   Topic: var-let-const.js
 
-  Demonstrates differences between var, let, and const in:
-    - Declaration behavior
-    - Redeclaration
-    - Reassignment
-    - Basic block scope visibility
+  Demonstrates:
+    - var is function-scoped and can be redeclared and reassigned
+    - let is block-scoped, cannot be redeclared, but can be reassigned
+    - const is block-scoped, cannot be redeclared or reassigned
 
   ⚠️ Note:
   This file does not cover full hoisting or scoping rules.
   For complete examples, see:
-    → scope/index.js
-    → hoisting/index.js
+    → 16-scope/index.js
+    → 17-hoisting/index.js
 */
 
 // --- 1. var: function-scoped, redeclarable, hoisted with undefined ---
@@ -26,7 +25,7 @@ console.log("var a:", a); // 30
 
 let b = 40;           // initial assignment
 
-// ❌ SyntaxError: Identifier 'b' has already been declared
+// Uncommenting the following line throws a SyntaxError due to redeclaration:
 // let b = 50;
 
 b = 60;               // ✅ Reassignment allowed
@@ -37,13 +36,15 @@ console.log("let b:", b); // 60
 
 const c = 70;         // initial assignment
 
-// ❌ SyntaxError: Identifier 'c' has already been declared
+// Uncommenting the following line throws a SyntaxError due to redeclaration:
 // const c = 80;
 
-// ❌ TypeError: Assignment to constant variable
+// Uncommenting the following line throws a TypeError due to reassignment:
 // c = 90;
 
 console.log("const c:", c); // 70
+
+// Note: const prevents reassignment but does NOT make objects immutable
 
 // --- 4. Block behavior: var leaks, let and const are scoped properly ---
 
@@ -59,8 +60,21 @@ if (true) {
 
 console.log("Outside block → var d:", d);     // 100
 
-// ❌ ReferenceError: e is not defined
+// Uncommenting the following lines throws ReferenceError because e and f are block scoped:
 // console.log(e);
-
-// ❌ ReferenceError: f is not defined
 // console.log(f);
+
+
+// --- Optional: function scope demonstration ---
+
+function testScope() {
+    if (true) {
+        var x = 1;
+        let y = 2;
+        const z = 3;
+    }
+    console.log("Inside function → var x:", x); // 1
+    // console.log(y); // ReferenceError: y is not defined
+    // console.log(z); // ReferenceError: z is not defined
+}
+testScope();
