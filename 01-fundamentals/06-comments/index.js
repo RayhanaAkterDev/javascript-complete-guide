@@ -4,49 +4,54 @@
   Demonstrates different types of comments in JavaScript:
     - Single-line comments
     - Multi-line comments
-    - TODO and FIXME tags
-    - Use of comments for clarity and debugging
+    - TODO and FIXME tags for task tracking
+    - Using comments to improve code clarity and aid debugging
 
   For usage context, see: documentation.js
 */
 
-// --- Single-line comments: describe the purpose of individual lines ---
+// --- 1. Single-line comments ---
+// Used to describe the purpose of specific lines or inline notes
 
 let userName = 'Sumaya';       // Store the user's name
 
-// --- Multi-line comments: group related context or explain logic clearly ---
+// --- 2. Multi-line comments ---
+// Group related context or explain complex logic clearly
 
 /*
-  These variables hold additional user information.
-  Useful for condition checks and profile setup.
+  These variables hold additional user information,
+  useful for condition checks and profile setup.
 */
 let age = 22;
 let isStudent = true;
 
-// --- TODO comments: indicate pending tasks or enhancements ---
+// --- 3. TODO comments ---
+// Mark pending tasks or features to implement later
 
 // TODO: Implement function to validate user input
 
 /*
-  Multi-line comments can also be used
-  to explain logic inside functions or blocks.
+  Multi-line comments can also explain logic inside functions or blocks.
 */
 function greetUser(name) {
-    // Use of template literal for better readability
-    return `Hello, ${name}! 👋`;
+  // Use template literals for clear string formatting
+  return `Hello, ${name}! 👋`;
 }
 
 console.log(greetUser(userName)); // Output: Hello, Sumaya!
 
-// --- FIXME comments: highlight known issues to fix later ---
+// --- 4. FIXME comments ---
+// Highlight known issues or areas needing fixes
 
 // FIXME: Adjust this if age-based rules change
 let yearsToGraduate = 4 - 2;     // Assuming 2 years completed
 
-// --- Disabled lines: helpful for temporary debugging ---
+// --- 5. Disabled code for debugging ---
+// Temporarily comment out lines to test or debug
 
 // console.log("Debug: age =", age);
 
-// --- Notes: reminders or developer hints ---
+// --- 6. Notes and reminders ---
+// Helpful tips or developer hints
 
-// Note: Comments should be clear, relevant, and not overused
+// Note: Write clear, relevant comments and avoid over-commenting

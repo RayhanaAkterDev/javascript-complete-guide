@@ -1,17 +1,27 @@
 # 06 - Comments
 
-Comments are **non-executable notes** in your code used to explain, clarify, or annotate.  
-They improve code readability, help debugging, and assist teamwork without affecting program execution.
+Comments are **non-executable notes** in your code that help explain, clarify, and annotate.  
+They improve code readability, aid debugging, and support teamwork without affecting how the program runs.
+
+---
+
+## ⚡ Quick Summary (TL;DR)
+
+- Comments do **not run**; they’re for developers only.  
+- Use `//` for **single-line comments** and `/* ... */` for **multi-line comments**.  
+- Comments help explain *why* code exists, clarify complex logic, or leave notes.  
+- Keep comments clear, concise, and updated.
 
 ---
 
 ## 1. What Are Comments?
 
-Comments are ignored by the JavaScript engine and exist purely for developer reference.
+Comments are ignored by JavaScript but essential for human readers.  
+They:
 
-- Explain why certain code exists  
-- Clarify complex or non-obvious logic  
-- Leave notes for future work or debugging  
+- Explain the purpose or reasoning behind code  
+- Clarify complicated or tricky parts  
+- Leave reminders, TODOs, or debugging notes  
 
 ---
 
@@ -19,7 +29,7 @@ Comments are ignored by the JavaScript engine and exist purely for developer ref
 
 ### 2.1 Single-line Comments
 
-Start with `//` and extend to the end of the line.
+Start with `//` and continue to the line’s end.
 
 ```js
 // This is a single-line comment
@@ -28,12 +38,12 @@ let x = 10; // Inline comment
 
 ### 2.2 Multi-line Comments
 
-Begin with `/*` and end with `*/`. Can span multiple lines.
+Wrap text between `/*` and `*/` and can span multiple lines.
 
 ```js
 /*
   This is a multi-line comment.
-  It can span several lines.
+  Useful for longer explanations.
 */
 let y = 20;
 ```
@@ -42,54 +52,48 @@ let y = 20;
 
 ## 3. Why Use Comments?
 
-- Document purpose or intent of code sections
-- Leave TODOs, FIXMEs, or notes for collaborators
-- Temporarily disable code during testing or debugging
-- Provide context for complex logic or algorithms
+- Document what and why code is doing something  
+- Mark code for future fixes or improvements (TODO, FIXME)  
+- Temporarily disable code for testing or debugging  
+- Add context for complex logic or algorithms  
 
 ---
 
-## 💡 Best Practices
+## 💡 Pro Tips
 
-✅ Write clear, concise, and relevant comments
-✅ Avoid stating the obvious; add value beyond code itself
-✅ Keep comments up-to-date with code changes
-✅ Use comments to explain why something is done, not what is done
-✅ Maintain consistent comment style and formatting
+- ✅ Write meaningful, relevant comments — avoid stating the obvious  
+- ✅ Explain *why* the code does something, not *what* it does  
+- ✅ Keep comments updated as code changes  
+- ✅ Use consistent formatting and style for readability  
 
 ---
 
-## 📂 Demo Files
+## 📂 Practice with Demo Files
 
-Explore the examples to practice commenting:
+Try these examples to practice commenting:
 
 - [`index.js`](index.js)
 
 ---
 
-## 🧪 Try It Online
+## 🔗 Navigation
 
-Try the examples interactively on:
+### 🔜 Next Topic
 
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+- [→ 07 - Variables](../07-variables/README.md)  
+  *Learn how to declare and manage variables with `var`, `let`, and `const`.*
 
----
+### 🔙 Previous Topic
 
-## 📚 Further Reading
-
-- [MDN - JavaScript Comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#comments) — Official guide to comment syntax and usage  
-- [JavaScript.info - Comments](https://javascript.info/comments) — Clear explanations with examples  
-- [freeCodeCamp - Writing Good Comments](https://www.freecodecamp.org/news/writing-good-comments/) — Best practices for meaningful comments  
+- [← 05 - Keywords](../05-keywords/README.md)  
+  *Discover JavaScript’s reserved words and their roles.*
 
 ---
 
-## 🔗 Next Topic
+### 📂 Explore More
 
-**[→ 07 - Variables](../07-variables/README.md)** —  Learn how to declare and manage variables using `var`, `let`, and `const`.
+- [← Back to Fundamentals Overview](../README.md)  
+  *Browse foundational JavaScript topics.*
 
----
-
-## 🧭 Navigation
-
-[← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+  *Return to the full roadmap and module list.*
