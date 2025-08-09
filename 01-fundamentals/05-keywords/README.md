@@ -1,15 +1,24 @@
 # 05 - JavaScript Keywords
 
-JavaScript keywords are **reserved words** with special meaning in the language syntax.  
-They form the language structure and cannot be used as variable, function, or class names.  
+JavaScript keywords are **reserved words** with special meaning in the language syntax. They form the language structure and cannot be used as variable, function, or class names.  
+
 Understanding keywords helps avoid syntax errors and naming conflicts.
+
+---
+
+## ⚡ Quick Summary (TL;DR)
+
+- Keywords are **predefined** and **reserved** by JavaScript  
+- They define **program structure** and **control flow**  
+- Using **keywords as identifiers causes syntax errors**  
+- Keep identifiers clear and avoid reserved words  
 
 ---
 
 ## 1. What Are JavaScript Keywords?
 
-Keywords are predefined and reserved by JavaScript to define program structure and control flow.  
-Using them as identifiers results in syntax errors.
+Keywords are special words that JavaScript uses to define its syntax and structure.  
+Trying to use them as variable or function names will cause errors.
 
 ```js
 let return = 5; // ❌ SyntaxError: Unexpected token 'return'
@@ -21,44 +30,48 @@ let return = 5; // ❌ SyntaxError: Unexpected token 'return'
 
 ### 2.1 Variable Declarations
 
-- `var` — function-scoped variable
-- `let` — block-scoped variable (ES6)
-- `const` — block-scoped constant (ES6)
+- `var` — function-scoped variable  
+- `let` — block-scoped variable (ES6)  
+- `const` — block-scoped constant (ES6)  
 
 ### 2.2 Control Flow
 
-- `if`, `else`, `switch`, `case`, `default`
-- `for`, `while`, `do`
-- `break`, `continue`
+- `if`, `else`, `switch`, `case`, `default`  
+- `for`, `while`, `do`  
+- `break`, `continue`  
 
 ### 2.3 Functions
 
-- `function`, `return`
-- `yield` — generator functions (ES6)
+- `function`, `return`  
+- `yield` — generator functions (ES6)  
 
 ### 2.4 Error Handling
 
-- `try`, `catch`, `finally`, `throw`
+- `try`, `catch`, `finally`, `throw`  
 
 ### 2.5 Classes & Modules
 
-- `class`, `extends`, `constructor`, `super`
-- `import`, `export`, `default`
+- `class`, `extends`, `constructor`, `super`  
+- `import`, `export`, `default`  
 
 ### 2.6 Logical & Contextual
 
-- `true`, `false`, `null`, `undefined`
-- `this`, `typeof`, `instanceof`, `in`, `new`, `delete`, `void`
+- `true`, `false`, `null`, `undefined`  
+- `this`, `typeof`, `instanceof`, `in`, `new`, `delete`, `void`  
 
-### 2.7 Strict Mode
+### 2.7 Strict Mode Directive
 
-- "`use strict`" — directive to enforce stricter parsing (not a keyword)
+- `"use strict"` — enables stricter parsing and error handling (not a keyword)  
+
+---
+
+> 📚 For a complete list of JavaScript reserved keywords, see [MDN JavaScript Keywords](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
 
 ---
 
 ## 3. Invalid Keyword Usage
 
-You cannot use reserved keywords as variable or function names:
+Using reserved keywords as identifiers causes syntax errors:
 
 ```js
 let let = 5;           // ❌ SyntaxError
@@ -68,45 +81,41 @@ const if = 10;         // ❌ SyntaxError
 
 ---
 
-## 💡 Best Practices
+## 💡 Pro Tips
 
-✅ Use clear, descriptive names that are not reserved keywords  
-✅ Avoid using or mimicking keywords in identifiers  
-✅ Use meaningful prefixes like `is`, `has`, `get`, `set` to avoid conflicts  
-✅ Keep updated with new ECMAScript keywords like `await`, `yield`, `import`  
+- ✅ Use clear, descriptive names that avoid reserved keywords  
+- ✅ Avoid mimicking keywords in variable or function names  
+- ✅ Use prefixes like `is`, `has`, `get`, `set` to reduce conflicts  
+- ✅ Stay updated with new keywords like `await`, `yield`, and `import`  
 
 ---
 
-## 📂 Demo Files
+## 📂 Practice with Demo Files
 
-Explore the examples to practice `keyword` concepts:
+Try the examples to practice keyword concepts:
 
 - [`index.js`](index.js)
 
 ---
 
-## 🧪 Try It Online
+## 🔗 Navigation
 
-Try the examples interactively on:
+### 🔜 Next Topic
 
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+- [→ 06 - Comments](../06-comments/README.md)  
+  *Learn how to write and use comments in JavaScript.*
 
----
+### 🔙 Previous Topic
 
-## 📚 Further Reading
-
-- [MDN - JavaScript Keywords](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) — Comprehensive list and explanation of reserved keywords in JavaScript
-- [W3Schools - JavaScript Reserved Words](https://www.w3schools.com/js/js_reserved.asp) — Beginner-friendly list of reserved keywords with examples
+- [← 04 - Statements & Expressions](../04-statements-expressions/README.md)  
+  *Understand the fundamental building blocks of JavaScript.*
 
 ---
 
-## 🔗 Next Topic
+### 📂 Explore More
 
-**[→ 06 - comments](../06-comments/README.md)** — Learn how to declare and manage variables using `var`, `let`, and `const`.
+- [← Back to Fundamentals Overview](../README.md)  
+  *Browse other core foundational topics.*
 
----
-
-## 🧭 Navigation
-
-[← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+  *Return to full roadmap and module list.*

@@ -9,8 +9,8 @@
 // --- 1. Variable Declarations ---
 // Use let and const for block-scoped variables and constants.
 
-let age = 25;            // Variable that can change
-const name = 'Sumaya';   // Constant value that cannot change
+let age = 25;            // Variable that can change.
+const name = 'Sumaya';   // Constant value that cannot change.
 
 console.log(age, name);
 
@@ -46,18 +46,18 @@ function greet(userName) {
 console.log(greet(name));
 
 // --- 5. Error Handling ---
-// Use try-catch-finally to handle errors gracefully.
+// Use try-catch-finally to handle errors gracefully and avoid crashing your program.
 
 try {
     throw new Error('Something went wrong!');
 } catch (error) {
     console.log('Caught error:', error.message);
 } finally {
-    console.log('Cleanup code runs regardless of errors');
+    console.log('Cleanup code runs regardless of errors.');
 }
 
 // --- 6. Classes (Basic Example) ---
-// Use class and extends keywords to create and inherit classes.
+// Use class to create classes and extends to inherit from other classes.
 
 class Animal {
     constructor(type) {
@@ -78,22 +78,23 @@ const pet = new Dog('Dog');
 pet.speak();
 
 // --- 7. Logical & Contextual Keywords ---
-// Examples of typeof, instanceof, and in keywords.
+// Used to check data types, inheritance, and object properties.
 
-console.log(typeof age);            // "number"
-console.log(pet instanceof Dog);   // true
-console.log('type' in pet);         // true
+console.log(typeof age);            // "number" — tells the data type.
+console.log(pet instanceof Dog);   // true — checks if pet is an instance of Dog class.
+console.log('type' in pet);        // true — checks if 'type' property exists in pet.
 
 // --- 8. Strict Mode ---
 // Use 'use strict' to enforce stricter parsing and error handling.
+// It must be placed at the top of the script or function.
 
 'use strict';
-// Uncommenting below line causes ReferenceError in strict mode:
+// Uncommenting the line below causes ReferenceError in strict mode:
 // undeclaredVar = 10;
 
 // --- 9. Invalid Keyword Usage (Examples) ---
 // These are invalid uses of reserved keywords (commented out).
 
-// let let = 5;           // ❌ SyntaxError: 'let' is reserved
-// function return() {}   // ❌ SyntaxError: 'return' is reserved
-// const class = 10;      // ❌ SyntaxError: 'class' is reserved
+// let let = 5;           // ❌ SyntaxError: 'let' is reserved.
+// function return() {}   // ❌ SyntaxError: 'return' is reserved.
+// const class = 10;      // ❌ SyntaxError: 'class' is reserved.
