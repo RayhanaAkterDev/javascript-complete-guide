@@ -1,5 +1,5 @@
 /*
-  Topic: objects.js
+  Topic: reference.js
 
   Demonstrates JavaScript reference data types, focusing on:
     - Objects, Arrays, Functions, Dates, RegExp
@@ -39,8 +39,9 @@ const pattern = /abc/gi;
 console.log("RegExp (pattern):", pattern);             // ✅ /abc/gi
 
 // --- 6. Reference behavior: Assignment & Mutation ---
-// Variables hold references to the same object in memory.
-// Mutations through any reference affect the shared object.
+// Variables store references (memory addresses) to objects, not the objects themselves.
+// Assigning an object to another variable copies the reference, not the object.
+// Mutations through any reference affect the original object.
 
 const obj1 = { value: 10 };
 const obj2 = obj1;                                      // obj2 references the same object as obj1
@@ -52,26 +53,27 @@ console.log("obj2.value:", obj2.value);                 // ✅ 20
 console.log("------");
 
 // --- 7. Equality by reference ---
-// Objects with identical content are NOT equal by strict equality (===).
-// Only references to the exact same object are strictly equal.
+// Strict equality (===) compares references for objects, not their content.
+// Two distinct objects with the same content are NOT equal.
+// Only variables referencing the exact same object are strictly equal.
 
 const o1 = { a: 1 };
 const o2 = { a: 1 };
 const o3 = o1;
 
-console.log("o1 === o2:", o1 === o2);                   // ❌ false
-console.log("o1 === o3:", o1 === o3);                   // ✅ true
+console.log("o1 === o2:", o1 === o2);                   // ❌ false (different objects)
+console.log("o1 === o3:", o1 === o3);                   // ✅ true (same reference)
 
 console.log("------");
 
 // --- 8. Shallow cloning objects ---
-// Object.assign copies only top-level properties.
-// Nested objects remain shared references between original and clone.
+// Object.assign() creates a shallow copy: top-level properties are copied,
+// but nested objects remain shared references between original and clone.
 
 const original = { x: 1, y: { z: 2 } };
 const clone = Object.assign({}, original);
 
-clone.x = 10;                                           // Changes clone.x only
+clone.x = 10;                                           // Changes clone.x only (primitive)
 clone.y.z = 20;                                         // Mutates original.y.z (nested reference)
 
 console.log("Original object:", original);              // ✅ { x: 1, y: { z: 20 } }
@@ -80,9 +82,11 @@ console.log("Cloned object:", clone);                    // ✅ { x: 10, y: { z:
 /*
   🔗 Notes:
   - Reference types store memory addresses pointing to objects.
-  - Mutations affect all references to the same object.
-  - Strict equality (===) compares references, not content.
+  - Assigning references copies the address, not the object itself.
+  - Mutations via any reference affect the shared object.
+  - Strict equality (===) compares references, not object content.
   - Shallow cloning copies only top-level properties; nested objects remain shared.
-  - Deep cloning requires special methods or libraries.
-  - See type-checking.js for detecting reference types.
+  - Deep cloning requires specialized methods or external libraries (e.g., lodash).
+  - Use `typeof` and `instanceof` or `Object.prototype.toString.call()` for detecting reference types.
+  - See type-checking.js for detailed type detection techniques.
 */

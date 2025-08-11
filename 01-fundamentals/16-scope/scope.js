@@ -1,5 +1,5 @@
 /*
-  Topic: index.js
+  Topic: scope.js
 
   Demonstrates core JavaScript scope concepts:
     - Global scope

@@ -7,10 +7,20 @@ Understanding these helps avoid bugs when working with mixed data types.
 
 ## ⚡ Quick Summary (TL;DR)
 
-- **Type Conversion (Explicit):** You manually change a value’s type using `String()`, `Number()`, `Boolean()`, etc.  
+- **Type Conversion (Explicit):** Manually change a value’s type using `String()`, `Number()`, `Boolean()`, etc.  
 - **Type Coercion (Implicit):** JavaScript automatically converts types during operations like `+`, `-`, or comparisons.  
 - **Truthy & Falsy:** Values convert to `true` or `false` in conditions.  
-- Prefer **explicit conversion** and **strict equality** (`===`) to avoid unexpected results.
+- Prefer **explicit conversion** and **strict equality** (`===`) to avoid unexpected results.  
+
+---
+
+📂 **Code Reference:**
+
+_Practice type conversion and coercion with these examples:_
+
+- [01-explicit-conversion.js](./01-explicit-conversion.js)  
+- [02-implicit-coercion.js](./02-implicit-coercion.js)  
+- [03-equality-coercion.js](./03-equality-coercion.js)  
 
 ---
 
@@ -19,13 +29,13 @@ Understanding these helps avoid bugs when working with mixed data types.
 JavaScript changes value types in two ways:
 
 - **Type Conversion (Explicit):** You intentionally convert a value using built-in functions.  
-- **Type Coercion (Implicit):** JavaScript automatically converts the value type when needed.
+- **Type Coercion (Implicit):** JavaScript automatically converts the value type when needed.  
 
 ---
 
 ## 2. Type Conversion (Explicit)
 
-Manual conversion of values using built-in functions or methods.
+Manual conversion using built-in functions or methods.
 
 ```js
 String(123);        // "123"
@@ -65,12 +75,12 @@ Values converted to boolean in conditional checks.
 
 **Falsy values:**
 
-- `false`
-- `0`
-- `""` (empty string)
-- `null`
-- `undefined`
-- `NaN`
+- `false`  
+- `0`  
+- `""` (empty string)  
+- `null`  
+- `undefined`  
+- `NaN`  
 
 Everything else is **truthy**.
 
@@ -102,21 +112,10 @@ null == undefined; // true
 
 ## 💡 Pro Tips
 
-- ✅ Use **strict equality** `===` & `!==`.  
-- ✅ Prefer **explicit conversion**: `Number()`, `String()`, `Boolean()`.  
-- 🚫 Avoid relying on implicit coercion in conditionals.  
-- ✅ Use `Number.isNaN()` to safely detect `NaN`.
-
----
-
-## 📂 Practice with Demo Files
-
-Try these examples to practice:
-
-- [`01-explicit-conversion.js`](./01-explicit-conversion.js)  
-- [`02-implicit-coercion.js`](./02-implicit-coercion.js)  
-- [`03-equality-coercion.js`](./03-equality-coercion.js)  
- Clear breakdown with examples  
+- ✅ Use **strict equality** `===` & `!==`  
+- ✅ Prefer **explicit conversion**: `Number()`, `String()`, `Boolean()`  
+- 🚫 Avoid relying on implicit coercion in conditionals  
+- ✅ Use `Number.isNaN()` to safely detect `NaN`  
 
 ---
 
@@ -125,19 +124,19 @@ Try these examples to practice:
 ### 🔜 Next Topic
 
 - [→ 10 - Operators](../10-operators/README.md)  
-  *Learn how JavaScript operators behave with different data types.*
+  _Learn how JavaScript operators behave with different data types._
 
 ### 🔙 Previous Topic
 
 - [← 08 - Data Types](../08-data-types/README.md)  
-  *Understand the kinds of values JavaScript can work with.*
+  _Understand the kinds of values JavaScript can work with._
 
 ---
 
 ### 📂 Explore More
 
 - [← Back to Fundamentals Overview](../README.md)  
-  *Browse foundational JavaScript topics.*
+  _Browse foundational JavaScript topics._
 
 - [🏠 Main JavaScript Guide](../../README.md)  
-  *Return to the full roadmap and module list.*
+  _Return to the full roadmap and module list._

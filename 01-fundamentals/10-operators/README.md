@@ -1,20 +1,42 @@
 # 10 - Operators & Expressions
 
-JavaScript operators perform actions on values (operands) to produce new values.  
-Expressions are combinations of operators and operands evaluated by the JavaScript engine.
+Operators are **symbols or keywords** that perform operations on one or more values (operands).  
+Expressions are combinations of operators and operands that JavaScript evaluates to produce a value.
 
 ---
 
-## 1. What is an Operator?
+## ⚡ Quick Summary (TL;DR)
 
-An **operator** is a symbol or keyword that performs operations on one or more operands and returns a result.
+- Operators perform actions like arithmetic, assignment, comparison, and logical operations  
+- Expressions combine operands and operators to compute values  
+- Operator precedence controls the order of evaluation  
+- Use parentheses `()` to explicitly set evaluation order  
 
-Examples:
+---
+
+📂 **Code Reference:**
+
+_Explore practical examples and exercises._
+
+- [`01-arithmetic.js`](01-arithmetic.js)  
+- [`02-assignment.js`](02-assignment.js)  
+- [`03-comparison.js`](03-comparison.js)  
+- [`04-logical.js`](04-logical.js)  
+- [`05-ternary.js`](05-ternary.js)  
+- [`06-precedence.js`](06-precedence.js)  
+
+---
+
+## 1. What Are Operators?
+
+An **operator** acts on operands (values or variables) to perform a specific operation and return a result.
+
+**Examples:**
 
 ```js
-5 + 3      // '+' addition operator
-x = 10     // '=' assignment operator
-a > b      // '>' comparison operator
+5 + 3      // Addition operator returns 8
+x = 10     // Assignment operator assigns 10 to x
+a > b      // Comparison operator checks if a is greater than b
 ```
 
 ---
@@ -23,113 +45,115 @@ a > b      // '>' comparison operator
 
 ### 2.1 Arithmetic Operators
 
-Used for mathematical operations:
+Used to perform mathematical calculations.
 
-| Operator | Description         | Example      |
-| -------- | ------------------- | ------------ |
-| `+`      | Addition            | `2 + 3` → 5  |
-| `-`      | Subtraction         | `5 - 2` → 3  |
-| `*`      | Multiplication      | `4 * 2` → 8  |
-| `/`      | Division            | `6 / 3` → 2  |
-| `%`      | Modulus (remainder) | `7 % 3` → 1  |
-| `**`     | Exponentiation      | `2 ** 3` → 8 |
-| `++`     | Increment           | `i++`        |
-| `--`     | Decrement           | `i--`        |
+| Operator | Description         | Example        |
+| -------- | ------------------- | -------------- |
+| `+`      | Addition            | `2 + 3` → 5    |
+| `-`      | Subtraction         | `5 - 2` → 3    |
+| `*`      | Multiplication      | `4 * 2` → 8    |
+| `/`      | Division            | `6 / 3` → 2    |
+| `%`      | Modulus (remainder) | `7 % 3` → 1    |
+| `**`     | Exponentiation      | `2 ** 3` → 8   |
+| `++`     | Increment           | `i++` increments i by 1 |
+| `--`     | Decrement           | `i--` decrements i by 1 |
 
 ---
 
 ### 2.2 Assignment Operators
 
-Used to assign or update variable values:
+Assign or update values in variables.
 
-| Operator | Example  | Meaning        |
-| -------- | -------- | -------------- |
-| `=`      | `x = 10` | Assign 10 to x |
-| `+=`     | `x += 5` | x = x + 5      |
-| `-=`     | `x -= 2` | x = x - 2      |
-| `*=`     | `x *= 3` | x = x \* 3     |
-| `/=`     | `x /= 4` | x = x / 4      |
+| Operator | Example  | Meaning                |
+| -------- | -------- | ---------------------- |
+| `=`      | `x = 10` | Assign 10 to variable x|
+| `+=`     | `x += 5` | Add 5 to x (x = x + 5)|
+| `-=`     | `x -= 2` | Subtract 2 from x      |
+| `*=`     | `x *= 3` | Multiply x by 3        |
+| `/=`     | `x /= 4` | Divide x by 4          |
 
 ---
 
 ### 2.3 Comparison Operators
 
-Used to compare two values:
+Compare two values, returning `true` or `false`.
 
-| Operator | Description           |
-| -------- | --------------------- |
-| `==`     | Equal (with coercion) |
-| `===`    | Equal (strict)        |
-| `!=`     | Not equal             |
-| `!==`    | Strict not equal      |
-| `>`      | Greater than          |
-| `<`      | Less than             |
-| `>=`     | Greater than or equal |
-| `<=`     | Less than or equal    |
+| Operator | Description            |
+| -------- | ---------------------- |
+| `==`     | Equal (with coercion)  |
+| `===`    | Strict equal (no coercion) |
+| `!=`     | Not equal              |
+| `!==`    | Strict not equal       |
+| `>`      | Greater than           |
+| `<`      | Less than              |
+| `>=`     | Greater than or equal  |
+| `<=`     | Less than or equal     |
 
 ---
 
 ### 2.4 Logical Operators
 
-Perform boolean logic:
+Perform boolean logic operations.
 
-| Operator | Description             |
-| -------- | ----------------------- |
-| `&&`     | AND (both must be true) |
-| `\|\|`   | OR (either must be true)|
-| `!`      | NOT (invert truthiness) |
+| Operator | Description               |
+| -------- | ------------------------- |
+| `&&`     | Logical AND (both true)   |
+| `\|\|`    | Logical OR (one or both true) |
+| `!`      | Logical NOT (invert value)|
 
 ---
 
 ### 2.5 Unary Operators
 
-Operate on a single operand:
+Operate on a single operand.
 
-| Operator    | Description             |
-| ----------- | ----------------------- |
-| `typeof`    | Returns operand type    |
-| `!`         | Logical NOT             |
-| `++` / `--` | Increment / Decrement   |
-| `delete`    | Deletes object property |
+| Operator    | Description                 |
+| ----------- | --------------------------- |
+| `typeof`    | Returns type as a string    |
+| `!`         | Logical NOT                 |
+| `++` / `--` | Increment / Decrement       |
+| `delete`    | Deletes object property     |
 
 ---
 
 ### 2.6 Ternary Operator
 
-Short form of if-else:
+Short-hand conditional expression.
 
 ```js
-let result = age >= 18 ? "adult" : "minor";
+let status = age >= 18 ? "adult" : "minor";
 ```
 
 ---
 
 ### 2.7 String Concatenation
 
-Use `+` operator to join strings:
+Join strings using the `+` operator.
 
 ```js
-"Hello " + "Sumaya"  // "Hello Sumaya"
+"Hello " + "Sumaya";  // "Hello Sumaya"
 ```
 
 ---
 
 ### 2.8 Bitwise Operators
 
-Operate on 32-bit binary representations:
+Operate on 32-bit binary representations.
 
-- `&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`
+| Operators                  |
+| -------------------------- |
+| `&`, `\|`, `^`, `~`, `<<`, `>>`, `>>>` |
 
-> Not commonly used in beginner projects.
+_Usually for advanced use cases._
 
 ---
 
 ## 3. Operator Precedence
 
-Determines the order in which expressions are evaluated.
+Determines the order operators are evaluated.
 
 ```js
-let result = 2 + 3 * 4; // 14, not 20
+let result = 2 + 3 * 4; // 14 (multiplication before addition)
 ```
 
 Use parentheses to override precedence:
@@ -138,55 +162,36 @@ Use parentheses to override precedence:
 let result = (2 + 3) * 4; // 20
 ```
 
-See [MDN Operator Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) for details.
+---
+
+## 💡 Pro Tips
+
+- ✅ Use strict equality (`===` and `!==`) to avoid unexpected coercion  
+- ✅ Use parentheses to clarify complex expressions  
+- ✅ Avoid mixing data types in operations  
+- ✅ Use ternary operator for concise conditional logic  
+- ✅ Use `typeof` and `instanceof` for reliable type checks  
 
 ---
 
-## 💡 Best Practices
+## 🔗 Navigation
 
-✅ Use `===` and `!==` to avoid coercion bugs.  
-✅ Use parentheses for clarity in complex expressions.  
-✅ Avoid mixing data types in expressions (e.g., `"5" + 1`).  
-✅ Prefer ternary operator for simple conditions.  
-✅ Use `typeof` and `instanceof` wisely for type checks.
+### 🔜 Next Topic
 
----
+- [→ 11 - Input & Output](../11-io-methods/README.md)  
+  _Learn about browser interaction using `console.log`, `alert`, `prompt`, and `confirm`._
 
-## 📂 Demo Files
+### 🔙 Previous Topic
 
-Explore the examples to practice `operators` concepts:
-
-- [`arithmetic.js`](arithmetic.js)  
-- [`assignment.js`](assignment.js)  
-- [`comparison.js`](comparison.js)  
-- [`logical.js`](logical.js)  
-- [`ternary.js`](ternary.js)  
-- [`precedence.js`](precedence.js)  
+- [← 09 - Type Conversion & Coercion](../09-type-conversion-coercion/README.md)  
+  _Understand how JavaScript converts and coerces types._
 
 ---
 
-## 🧪 Try It Online
+### 📂 Explore More
 
-Try the examples interactively on:
+- [← Back to Fundamentals Overview](../README.md)  
+  _Browse foundational JavaScript topics._
 
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
-
----
-
-## 📚 Further Reading
-
-- [MDN JavaScript Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) — Comprehensive guide  
-- [JavaScript.info: Operators](https://javascript.info/operators) — Beginner-friendly explanations  
-
----
-
-## 🔗 Next Topic
-
-**[→ 11 - Input & Output](../11-io-methods/README.md)** — Learn browser interaction methods like `console.log`, `alert`, `prompt`, and `confirm`.
-
----
-
-## 🧭 Navigation
-
-[← Back to Fundamentals](../README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+  _Return to the full roadmap and module list._

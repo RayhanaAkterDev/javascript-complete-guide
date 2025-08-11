@@ -9,16 +9,24 @@ Understanding how they work—and why they differ—unlocks clearer and more pre
 
 ## ⚡ Quick Summary (TL;DR)
 
-- **Expressions** produce values (like answers).  
-- **Statements** perform actions (like instructions).  
-- Always **end statements with semicolons `;`** to avoid tricky bugs from ASI (Automatic Semicolon Insertion).
+- **Expressions** produce values (like answers)  
+- **Statements** perform actions (like instructions)  
+- Always **end statements with semicolons `;`** to avoid tricky bugs from ASI (Automatic Semicolon Insertion)
+
+---
+
+📂 **Code Reference:**  
+
+_View complete examples in the context._  
+
+- [statement-expression.js](./statement-expression.js)
 
 ---
 
 ## 1. What Are Expressions?
 
 An **expression** is a piece of code that **produces a value**.  
-Think of it as answering the question: *“What is the value?”*
+Think of it as answering the question: _“What is the value?”_
 
 - Can be simple (numbers, strings) or complex (calculations, function calls)  
 - Can be used inside statements or assigned to variables
@@ -74,9 +82,9 @@ for (let i = 0; i < 5; i++) { // Loop statement
 
 ## 4. Semicolons & Automatic Semicolon Insertion (ASI)
 
-- Statements end with semicolons `;` to mark their end.  
-- JavaScript can insert semicolons automatically (ASI), but this may cause bugs.  
-- **Avoid errors by always ending statements with semicolons.**
+- Statements end with semicolons `;` to mark their end  
+- JavaScript can insert semicolons automatically (ASI), but this may cause bugs  
+- **Avoid errors by always ending statements with semicolons**
 
 **Problem example without semicolon:**
 
@@ -93,7 +101,7 @@ a
 
 ## 5. Expression Statements
 
-Some statements are just expressions used alone, called *expression statements*.
+Some statements are just expressions used alone, called _expression statements_.
 
 ```js
 a = b + c;    // Assignment expression as statement
@@ -135,32 +143,24 @@ if (score >= passingScore) {
 
 ---
 
-## 📂 Practice with Demo Files
-
-Try these examples to practice:
-
-- [`index.js`](./index.js)
-
----
-
 ## 🔗 Navigation
 
 ### 🔜 Next Topic
 
 - [→ 05 - Keywords](../05-keywords/README.md)  
-  *Discover JavaScript’s reserved words and their roles.*
+_Discover JavaScript’s reserved words and their roles._
 
 ### 🔙 Previous Topic
 
 - [← 03 - Embedding JavaScript](../03-embedding-js/README.md)  
-  *Learn effective ways to include JavaScript in HTML.*
+_Learn effective ways to include JavaScript in HTML._
 
 ---
 
 ### 📂 Explore More
 
 - [← Back to Fundamentals Overview](../README.md)  
-  *Browse foundational JavaScript topics.*
+_Browse foundational JavaScript topics._
 
 - [🏠 Main JavaScript Guide](../../README.md)  
-  *Return to the full roadmap and module list.*
+_Return to the full roadmap and module list._

@@ -14,8 +14,11 @@ They allow you to store, update, and retrieve information dynamically during cod
 
 ---
 
-📂 **Code Reference:** [variables.js](./variables.js)  
+📂 **Code Reference:**
+
 _View complete examples in the context._
+
+- [variables.js](./variables.js)  
 
 ---
 
@@ -80,7 +83,7 @@ var city = "Dhaka"; // Function-scoped (not recommended)
 | Function Scope | `var`            | Inside the function where declared     |
 | Global Scope   | Any keyword outside functions | Anywhere in the program |
 
-See also: [scope.js](../16-scope/scope.js) for practical examples.
+> See also: [scope.js](../16-scope/scope.js) for practical examples.
 
 ---
 

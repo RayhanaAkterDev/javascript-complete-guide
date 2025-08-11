@@ -5,6 +5,23 @@ They control the flow of execution and enable dynamic behavior.
 
 ---
 
+## ⚡ Quick Summary (TL;DR)
+
+- Conditionals execute code blocks based on whether conditions are true or false  
+- Use `if`, `if...else`, `if...else if...else`, `switch`, and ternary (`? :`) statements  
+- Always use strict equality `===` to avoid unexpected type coercion  
+- Keep conditional logic simple and readable for maintainability  
+
+---
+
+📂 **Code Reference:**
+
+_Practice conditional statements with:_
+
+- [`conditionals.js`](conditionals.js)  
+
+---
+
 ## 1. What Are Conditionals?
 
 A conditional statement executes code only if a specified condition evaluates to `true`.
@@ -61,8 +78,8 @@ if (score >= 90) {
 
 ### 2.4 The `switch` Statement
 
-- Compares a value against multiple cases and executes matching block.
-- **Remember**: Use break to prevent fall-through to the next case.
+- Compares a value against multiple cases and executes matching block.  
+- Use `break` to prevent fall-through between cases.
 
 ```js
 let day = 3;
@@ -95,45 +112,32 @@ console.log(access);
 
 ## 💡 Best Practices
 
-✅ Use `===` for comparisons to avoid type coercion  
-✅ Use `switch` for clearer multi-choice decisions  
-✅ Keep conditions simple and readable  
-✅ Prefer ternary for short conditional assignments  
-✅ Use nested `if...else` sparingly—prefer to simplify logic or use functions for complex branching
+- ✅ Use `===` for comparisons to avoid type coercion bugs  
+- ✅ Use `switch` for clearer multi-choice logic  
+- ✅ Keep conditions simple and readable  
+- ✅ Prefer ternary for concise conditional assignments  
+- 🚫 Avoid deep nested `if...else`; refactor or use functions for complex logic  
 
 ---
 
-## 📂 Demo Files
+## 🔗 Navigation
 
-Explore these examples for conditional logic practice:
+### 🔜 Next Topic
 
-- [`index.js`](index.js)  
+- [→ 14 - Loops](../14-loops/README.md)  
+  _Automate repetitive tasks with `for`, `while`, and `do...while` loops._
 
----
+### 🔙 Previous Topic
 
-## 🧪 Try It Online
-
-Try the examples interactively on:
-
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+- [← 12 - String Manipulation](../12-string-manipulation/README.md)  
+  _Work with strings using built-in methods and template literals._
 
 ---
 
-## 📚 Further Reading
+### 📂 Explore More
 
-- [MDN - if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) — Official, detailed reference for if-else statements  
-- [MDN - switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) — Comprehensive guide on switch statements and usage  
-- [JavaScript.info - Conditional operators](https://javascript.info/ifelse) — Clear, beginner-friendly explanations of conditional statements  
+- [← Back to Fundamentals Overview](../README.md)  
+  _Browse foundational JavaScript topics._
 
----
-
-## 🔗 Next Topic
-
-**[→ 14 - Loops](../14-loops/README.md)** — Automate repetitive tasks with `for`, `while`, and `do...while`.
-
----
-
-## 🧭 Navigation
-
-[← Back to String Manipulation](../12-string-manipulation/README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+  _Return to the full roadmap and module list._

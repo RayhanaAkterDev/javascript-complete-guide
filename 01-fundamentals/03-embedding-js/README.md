@@ -1,29 +1,48 @@
 # 03 - Embedding JavaScript
 
-**Embedding JavaScript** means adding JavaScript code to your HTML pages to create interactivity, logic, and dynamic behavior.  
+**Embedding JavaScript** means adding JavaScript code to your HTML pages to create interactivity, logic, and dynamic behavior.
+
 There are three main ways to embed JavaScript, each with its own use cases, benefits, and drawbacks.
 
 ---
 
 ## ⚡ Quick Summary (TL;DR)
 
-- **Inline JavaScript:** Code inside HTML attributes; quick but not recommended.  
-- **Internal JavaScript:** Code inside `<script>` tags within HTML; good for small demos.  
-- **External JavaScript:** Code in separate `.js` files linked to HTML; best for production.  
-- Use script tag attributes (`defer`, `async`, `type="module"`) to control how and when scripts run.
+- **Inline JavaScript:** Code inside HTML attributes; quick but not recommended  
+- **Internal JavaScript:** Code inside `<script>` tags within HTML; good for small demos  
+- **External JavaScript:** Code in separate `.js` files linked to HTML; best for production  
+- Use script tag attributes (`defer`, `async`, `type="module"`) to control how and when scripts run
 
 ---
 
-## 1. Inline JavaScript
+📂 **Code Reference:**  
 
-**Inline JavaScript** is code written directly inside an HTML element’s attribute, like `onclick`.  
-Think of it as a quick way to trigger JavaScript behavior attached to specific HTML elements.
+_View complete examples in the context._
 
-- Fast for quick tests or small snippets  
-- Breaks separation of concerns by mixing content and behavior  
-- Raises security risks such as Cross-Site Scripting (XSS)  
-- Not recommended for production environments  
-- Prefer using JavaScript event listeners for better maintainability
+- [`index.html`](./index.html)  
+- [`script.js`](./script.js)
+
+---
+
+## 1. What Is Embedding JavaScript?
+
+Embedding JavaScript means putting your JavaScript code into HTML documents to add behavior and interactivity.
+
+- Allows your pages to respond to user actions  
+- Adds logic and dynamic content  
+- Can be done in different ways depending on project size and needs
+
+---
+
+## 2. Inline JavaScript
+
+Inline JavaScript is code written directly inside an HTML element’s attribute (e.g., `onclick`).
+
+- Quick to add small behavior  
+- Mixes HTML and JS, reducing maintainability  
+- Introduces security risks like Cross-Site Scripting (XSS)  
+- Not recommended for production code  
+- Better to use JavaScript event listeners instead
 
 **Example:**
 
@@ -33,15 +52,14 @@ Think of it as a quick way to trigger JavaScript behavior attached to specific H
 
 ---
 
-## 2. Internal JavaScript
+## 3. Internal JavaScript
 
-**Internal JavaScript** is code placed inside `<script>` tags within the HTML file itself, usually in the `<head>` or before the closing `</body>` tag.  
-Think of it as embedding your JavaScript directly into your HTML document.
+Internal JavaScript is code placed inside `<script>` tags within the HTML file.
 
-- Useful for small projects and quick demos  
-- Can mix markup and script, which reduces maintainability for larger projects  
-- Scripts in the `<head>` can block page rendering unless `defer` is used  
-- Best practice is to place scripts before `</body>` or use the `defer` attribute
+- Useful for small projects or demos  
+- Can slow page rendering if placed in `<head>` without `defer`  
+- Best placed before closing `</body>` tag or use `defer` attribute  
+- Mixing markup and script can reduce maintainability in larger projects
 
 **Example:**
 
@@ -53,15 +71,14 @@ Think of it as embedding your JavaScript directly into your HTML document.
 
 ---
 
-## 3. External JavaScript
+## 4. External JavaScript
 
-**External JavaScript** is code stored in separate `.js` files that you link to your HTML using the `src` attribute.  
-Think of it as separating your JavaScript logic from your HTML content completely.
+External JavaScript stores code in separate `.js` files linked via `src` attribute.
 
-- Recommended for all production-level projects  
-- Promotes modularity, reusability, and easier maintenance  
-- Allows browsers to cache scripts, speeding up page loads on repeat visits  
-- Make sure the file path is correct relative to your HTML file (relative vs absolute paths matter!)
+- Recommended for production  
+- Improves modularity, reusability, and maintainability  
+- Enables browser caching, speeding repeat loads  
+- Ensure file paths are correct (relative vs absolute)
 
 **Example:**
 
@@ -75,23 +92,21 @@ In `script.js`:
 console.log("External script loaded");
 ```
 
-> ⚠️ **Tip:** Using incorrect file paths (relative or absolute) is a common beginner mistake that causes scripts to fail loading. Always verify your file locations and paths carefully.
+> ⚠️ **Tip:** Incorrect file paths are a common beginner mistake causing scripts to fail. Verify your paths carefully.
 
 ---
 
-## 4. Script Tag Attributes for Loading Control
+## 5. Script Tag Attributes for Loading Control
 
-Script tags support attributes that affect when and how scripts are loaded and executed.
+| Attribute       | Description                                                                                       |
+|-----------------|-------------------------------------------------------------------------------------------------|
+| `defer`         | Loads script asynchronously and executes it **after** HTML parsing (recommended)                 |
+| `async`         | Loads script asynchronously and executes **as soon as ready**, possibly out of order             |
+| `type="module"` | Treats script as an ES module, enables `import`/`export`, runs in strict mode, implies `defer`  |
 
-| Attribute       | Description                                                                                  |
-|-----------------|----------------------------------------------------------------------------------------------|
-| `defer`         | Loads script asynchronously and executes it **after** the HTML parsing is complete (recommended) |
-| `async`         | Loads script asynchronously and executes it **as soon as ready**, potentially out of order. Good for independent scripts like analytics or ads that don’t rely on other scripts. |
-| `type="module"` | Treats the script as an ES module, enables `import`/`export`, runs in strict mode, implies `defer` |
-
-- Use `defer` or `type="module"` for non-blocking, predictable script execution  
-- Use `async` for scripts that are independent and don’t depend on the DOM or other scripts  
-- Avoid `async` for scripts that must run in order or rely on DOM elements not yet loaded
+- Use `defer` or `type="module"` for non-blocking, predictable execution  
+- Use `async` only for scripts independent of DOM or other scripts  
+- Avoid `async` for scripts that must run in order or depend on DOM elements
 
 ---
 
@@ -106,33 +121,24 @@ Script tags support attributes that affect when and how scripts are loaded and e
 
 ---
 
-## 📂 Practice with Demo Files
-
-Try practicing these embedding methods with the following demo files:
-
-- [`index.html`](./index.html)  
-- [`script.js`](./script.js)
-
----
-
 ## 🔗 Navigation
 
 ### 🔜 Next Topic
 
 - [→ 04 - Statements & Expressions](../04-statements-expressions/README.md)  
-  *Learn how JavaScript statements and expressions structure your code.*
+_Understand how JavaScript statements and expressions structure your code._
 
 ### 🔙 Previous Topic
 
 - [← 02 - JavaScript Runtime](../02-js-runtime/README.md)  
-  *Understand how JavaScript runs in the browser environment.*
+_Learn how JavaScript runs in the browser environment._
 
 ---
 
 ### 📂 Explore More
 
 - [← Back to Fundamentals Overview](../README.md)  
-  *Browse other foundational JavaScript topics.*
+_Browse foundational JavaScript topics._
 
 - [🏠 Main JavaScript Guide](../../README.md)  
-  *Return to the full JavaScript roadmap.*
+_Return to the full roadmap and module list._

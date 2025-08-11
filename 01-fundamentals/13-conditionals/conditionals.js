@@ -58,7 +58,7 @@ default:
     console.log("❌ Role not recognized.");
 }
 
-// --- ternary: short if...else expression ---
+// --- ternary: concise if...else expression ---
 
 let currentHour = new Date().getHours();
 
@@ -70,7 +70,7 @@ let greeting = currentHour < 12
 
 console.log(greeting);
 
-// --- nested if...else: decision tree logic (used cautiously) ---
+// --- nested if...else: decision tree logic (use sparingly) ---
 
 let hasCard = true;
 let cardValid = false;
@@ -84,3 +84,11 @@ if (hasCard) {
 } else {
     console.log("❌ No card found.");
 }
+
+/*
+  🔗 Notes:
+    - Use if...else for branching logic.
+    - Use switch for matching discrete values, always include break.
+    - Ternary operators are great for concise simple conditions but avoid complex nesting.
+    - Nested conditionals can reduce readability; consider refactoring if deeply nested.
+*/

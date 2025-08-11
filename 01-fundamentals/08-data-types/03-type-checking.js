@@ -48,9 +48,9 @@ console.log(Number.isNaN(NaN));   // ✅ true
 // --- 6. Example: robust type check function ---
 
 function getType(value) {
-    if (value === null) return "null";         // explicit null check
-    if (Array.isArray(value)) return "array";  // reliable array check
-    return typeof value;                        // fallback to typeof
+    if (value === null) return "null";          // explicit null check
+    if (Array.isArray(value)) return "array";   // reliable array check
+    return typeof value;                         // fallback to typeof for primitives, functions, and objects
 }
 
 console.log(getType(null));        // "null"
@@ -61,9 +61,10 @@ console.log(getType("text"));      // "string"
 
 /*
   🔗 Notes:
-  - Use typeof for primitives and functions.
-  - Use instanceof to check if an object is an instance of a class or constructor.
-  - Use Array.isArray() for reliable array detection.
-  - Check null explicitly because typeof null returns "object".
-  - Use Number.isNaN() to detect NaN safely, as NaN !== NaN.
+  - Use typeof for primitives, functions, and general objects.
+  - Use instanceof to check if an object is an instance of a specific constructor or class.
+  - Use Array.isArray() for reliable array detection, since arrays are technically objects.
+  - Always check null explicitly because typeof null returns "object".
+  - Use Number.isNaN() to safely detect NaN values, as NaN !== NaN.
+  - For more advanced type checking, consider libraries or custom utilities.
 */
