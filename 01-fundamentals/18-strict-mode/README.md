@@ -92,7 +92,7 @@ function demo(a, a) { }
 
 ### 🔜 Next Topic
 
-- [02 - Core JavaScript Mechanics (Part 1)](../02-js-mechanism-part-1/README.md)  
+- [02 - Core JavaScript Mechanics (Part 1)](../../02-js-mechanism-part-1/README.md)  
 _Learn how JavaScript executes code, manages scope, handles closures, and uses the `this` keyword._
 
 ### 🔙 Previous Topic

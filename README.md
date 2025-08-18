@@ -68,10 +68,13 @@ Whether you're learning from scratch, reviewing fundamentals, or preparing for r
 
 > Internal concepts essential for understanding how JS works under the hood. A must before moving into functions and async code.
 
-- [Execution Context & Call Stack](./02-js-mechanism-par-1/execution-context-call-stack.md)
-- [Lexical Scope & Scope Chain](./02-js-mechanism-par-1/lexical-scope-scope-chain.md)
-- [Closures](./02-js-mechanism-par-1/closures.md)
-- [`this` Keyword (Function, Object, Arrow)](./02-js-mechanism-par-1/this-keyword.md)
+- [Execution Context & Call Stack](./02-js-mechanism-part-1/01-execution-context-call-stack/README.md)
+- [Memory Management & Garbage Collection](./02-js-mechanism-part-1/02-memory-management/README.md)
+- [Scope & Lexical Environment](./02-js-mechanism-part-1/03-scope-lexical-environment/README.md)
+- [Closures](./02-js-mechanism-part-1/04-closures/README.md)
+- [`this` Keyword (Function, Object, Arrow)](./02-js-mechanism-part-1/05-this-keyword/README.md)
+- [Prototype & Prototype Chain](./02-js-mechanism-part-1/06-prototype-chain/README.md)
+- [Shadowing & Variable Lookup](./02-js-mechanism-part-1/07-shadowing-variable-lookup/README.md)
 
 ---
 
