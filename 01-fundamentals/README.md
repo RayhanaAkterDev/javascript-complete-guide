@@ -61,5 +61,5 @@ Work through the topics in order, experiment with code, and revisit tricky areas
 
 ## 🔗 Navigation
 
-- 🔜 Next Up → [02 - Core JavaScript Mechanics (Part 1)](../02-js-mechanism-par-1/README.md)
+- 🔜 Next Up → [02 - Core JavaScript Mechanics (Part 1)](../02-js-mechanism-part-1/README.md)
 - 🏠 Home ← [Return to JavaScript Core Concepts Overview](../README.md)

@@ -1,22 +1,43 @@
 # 17 - Hoisting
 
-Hoisting is JavaScript’s default behavior of **moving declarations to the top** of their containing scope before code execution.  
-Understanding hoisting helps avoid unexpected bugs and write clearer code.
+Hoisting is JavaScript’s behavior of **moving declarations to the top** of their scope before code runs.  
+Understanding hoisting helps prevent bugs and makes code more predictable.
+
+---
+
+## ⚡ Quick Summary (TL;DR)
+
+- **Hoisting** moves variable and function declarations to the top of their scope  
+- **Function Declarations** → fully hoisted (can be called before defined)  
+- **var** → hoisted but initialized with `undefined`  
+- **let / const** → hoisted but in **Temporal Dead Zone (TDZ)** until declared  
+- Knowing hoisting helps avoid confusion and errors
+
+---
+
+📂 **Code Reference:**
+
+_View complete examples in the context._
+
+- [hoisting.js](hoisting.js)
 
 ---
 
 ## 1. What Is Hoisting?
 
-In JavaScript, variable and function declarations are processed before any code runs, meaning you can use variables and call functions before they are declared in the code — to some extent.
+In JavaScript, variable and function declarations are processed before any code runs.  
+This means you can use them earlier than they appear — with some important differences.
+
+**Example:**
 
 ```js
-console.log(greet()); // Works because function declarations are hoisted
+console.log(greet()); // ✅ Works (function hoisted)
 
 function greet() {
   return "Hello!";
 }
 
-console.log(x); // undefined due to variable hoisting
+console.log(x); // undefined (var hoisted but not initialized)
 var x = 5;
 ```
 
@@ -26,19 +47,23 @@ var x = 5;
 
 ### 2.1 Function Declarations
 
-- Entire function declarations are hoisted, so you can call them before they appear in code.
+- Entire function definitions are hoisted.  
+- You can call them before they appear in code.
 
 ```js
-hello();
+sayHi(); // ✅ Works
 
-function hello() {
+function sayHi() {
   console.log("Hi there!");
 }
 ```
 
-### 2.2 Variable Declarations with `var`
+---
 
-- Variables declared with `var` are hoisted but initialized with `undefined`.
+### 2.2 Variables with `var`
+
+- Hoisted but initialized as `undefined`.  
+- Using them before assignment gives `undefined`.
 
 ```js
 console.log(a); // undefined
@@ -46,13 +71,15 @@ var a = 10;
 console.log(a); // 10
 ```
 
+---
+
 ### 2.3 Variables with `let` and `const`
 
-- Declarations are hoisted but not initialized.
-- Accessing them before declaration causes ReferenceError due to the **Temporal Dead Zone** (TDZ).
+- Hoisted but not initialized.  
+- Accessing them before declaration causes **ReferenceError** due to the **Temporal Dead Zone (TDZ)**.
 
 ```js
-console.log(b); // ReferenceError
+console.log(b); // ❌ ReferenceError
 let b = 20;
 ```
 
@@ -60,45 +87,32 @@ let b = 20;
 
 ## 💡 Best Practices
 
-✅ Always declare variables at the top of their scope to avoid confusion  
-✅ Prefer `let` and `const` over `var` to minimize hoisting-related bugs  
-✅ Avoid relying on hoisting for code logic clarity  
-✅ Use function declarations for clarity and predictable hoisting  
-✅ Understand TDZ to avoid errors with `let` and `const`
+- ✅ Always declare variables before using them  
+- ✅ Prefer `let` and `const` over `var`  
+- ✅ Don’t rely on hoisting for clarity  
+- ✅ Use function declarations when predictable hoisting is useful  
+- ✅ Understand TDZ for safer `let`/`const` use  
 
 ---
 
-## 📂 Demo Files
+## 🔗 Navigation
 
-Explore these examples demonstrating hoisting behaviors:
+### 🔜 Next Topic
 
-- [`index.js`](index.js)
+- [→ 18 - Strict Mode](../18-strict-mode/README.md)  
+_Learn how strict mode makes JavaScript safer by catching errors and restricting unsafe practices._
 
----
+### 🔙 Previous Topic
 
-## 🧪 Try It Online
-
-Try the examples interactively on:
-
-- [JSConsole](https://jsconsole.com) — Quick JS-only testing  
-- [JSFiddle](https://jsfiddle.net) — Test JS with HTML/CSS
+- [← 16 - Scope](../16-scope/README.md)  
+_Discover how variable and function visibility works in different contexts._
 
 ---
 
-## 📚 Further Reading
+### 📂 Explore More
 
-- [MDN - Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) — Detailed explanation and examples  
-- [JavaScript.info - Hoisting](https://javascript.info/variables#hoisting) — Clear beginner-friendly guide  
-- [MDN - Temporal Dead Zone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_td_zone) — Explanation of TDZ
+- [← Back to Fundamentals Overview](../README.md)  
+_Browse foundational JavaScript topics._
 
----
-
-## 🔗 Next Topic
-
-**[→ 18 - Closures](../18-closures/README.md)** — Functions that remember their lexical environment.
-
----
-
-## 🧭 Navigation
-
-[← Back to Scope](../16-scope/README.md) | [🏠 Main README](../../README.md)
+- [🏠 Main JavaScript Guide](../../README.md)  
+_Return to the full roadmap and module list._
