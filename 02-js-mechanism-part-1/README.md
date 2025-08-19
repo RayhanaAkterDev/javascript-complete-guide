@@ -20,5 +20,6 @@ Work through the topics step by step, try examples, and revisit challenging conc
 
 ## 🔗 Navigation
 
-- 🔜 Next Up → [03 - Data Structures & Functional Programming](../03-data-structures-functional/README.md)  
+- 🔜 Next Topic → [03 - Data Structures & Functional Programming](../03-data-structures-functional/README.md)  
+- 🔙 Previous Topic → [01 - JavaScript Fundamentals](../01-fundamentals/README.md)  
 - 🏠 Home ← [Return to JavaScript Core Concepts Overview](../README.md)
